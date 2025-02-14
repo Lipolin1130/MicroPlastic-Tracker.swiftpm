@@ -153,7 +153,7 @@ struct BiologyView: View {
                             .background(Color.gray)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .foregroundStyle(.white)
-                            .frame(width: 150)
+                            .frame(width: 140)
                         
                     }
                 }

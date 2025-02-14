@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MuseumView: View {
     
-    @EnvironmentObject private var playerData: PlayerData
+    @EnvironmentObject private var gameService: GameService
     
     let biology: [BiologyInfo] = [
         salp, northernPrawn, anchovy,
@@ -21,17 +21,17 @@ struct MuseumView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .center, spacing: 180) {
                     ForEach(biology, id: \.self) {bio in
-                        if let index = playerData.collectedBiology.firstIndex(where: {
+                        if let index = gameService.collectedBiology.firstIndex(where: {
                             $0.type == bio.type
                         }) {
                             BiologyView(
-                                enabled: $playerData.collectedBiology[index].enabled,
-                                microplastic: $playerData.collectedMicroplastic,
+                                enabled: $gameService.collectedBiology[index].enabled,
+                                microplastic: $gameService.collectedMicroplastic,
                                 biology: bio
                             )
                             .padding(.top, 80)
                             
-                            if index != playerData.collectedBiology.count - 1 {
+                            if index != gameService.collectedBiology.count - 1 {
                                 Image(systemName: "arrowshape.right.fill")
                                     .font(.system(size: 80))
                             }
@@ -54,7 +54,7 @@ struct MuseumView: View {
                         .scaledToFit()
                         .frame(height: 60)
                     
-                    Text("\(playerData.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                    Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
                         .font(.largeTitle)
                     
                     Image(microfibers.imageName)
@@ -62,7 +62,7 @@ struct MuseumView: View {
                         .scaledToFit()
                         .frame(height: 60)
                     
-                    Text("\(playerData.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                    Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
                         .font(.largeTitle)
                     
                     Image(microfragments.imageName)
@@ -70,7 +70,7 @@ struct MuseumView: View {
                         .scaledToFit()
                         .frame(height: 60)
                     
-                    Text("\(playerData.collectedMicroplastic.microfragments, specifier: "%.1f")")
+                    Text("\(gameService.collectedMicroplastic.microfragments, specifier: "%.1f")")
                         .font(.largeTitle)
                 }
                 .monospaced()
@@ -81,7 +81,7 @@ struct MuseumView: View {
             }
         }
         .onAppear {
-            playerData.collectedMicroplastic = Microplastic(
+            gameService.collectedMicroplastic = Microplastic(
                 microbeads: 2000,
                 microfibers: 2000,
                 microfragments: 2000
@@ -92,6 +92,6 @@ struct MuseumView: View {
 
 #Preview {
     MuseumView()
-        .environmentObject(PlayerData())
+        .environmentObject(GameService())
 }
 

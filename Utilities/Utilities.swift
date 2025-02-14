@@ -34,3 +34,22 @@ extension Image {
         }
     }
 }
+
+extension BiologyType {
+    func imageName() -> String {
+        switch self {
+        case .salp:
+            return "Salpa"
+        case .shrimp:
+            return "Northern Prawn"
+        case .anchovy:
+            return "Anchovy"
+        case .skipjackTuna:
+            return "Skipjack Tuna"
+        case .tuna:
+            return "Tuna"
+        case .human:
+            return "Human"
+        }
+    }
+}

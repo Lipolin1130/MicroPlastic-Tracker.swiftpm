@@ -3,11 +3,11 @@ import SwiftUI
 @main
 struct MyApp: App {
     
-    @StateObject private var playerData: PlayerData = PlayerData()
+    @StateObject private var gameService: GameService = GameService()
     var body: some Scene {
         WindowGroup {
             StartView()
-                .environmentObject(playerData)
+                .environmentObject(gameService)
         }
     }
 }

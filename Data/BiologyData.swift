@@ -9,7 +9,6 @@
 // TODO: change size to average size and description
 
 let salp = BiologyInfo(
-//    order: 1,
     type: .salp,
     scientificName: "\"Salpa spp.\"",
     imageName: "Salpa",
@@ -26,7 +25,6 @@ let salp = BiologyInfo(
 )
 
 let northernPrawn = BiologyInfo(
-//    order: 2,
     type: .shrimp,
     scientificName: "\"Pandalus borealis\"",
     imageName: "Northern Prawn",
@@ -43,7 +41,6 @@ let northernPrawn = BiologyInfo(
 )
 
 let anchovy = BiologyInfo(
-//    order: 3,
     type: .anchovy,
     scientificName: "\"Engraulidae\"",
     imageName: "Anchovy",
@@ -61,7 +58,6 @@ let anchovy = BiologyInfo(
 
 
 let skipjackTuna = BiologyInfo(
-//    order: 4,
     type: .skipjackTuna,
     scientificName: "\"Katsuwonus pelamis\"",
     imageName: "Skipjack Tuna",
@@ -78,7 +74,6 @@ let skipjackTuna = BiologyInfo(
 )
 
 let atlanticBluefineTuna = BiologyInfo(
-//    order: 5,
     type: .tuna,
     scientificName: "\"Thunnus thynnus\"",
     imageName: "Tuna",
@@ -96,7 +91,6 @@ let atlanticBluefineTuna = BiologyInfo(
 
 
 let human = BiologyInfo(
-//    order: 6,
     type: .human,
     scientificName: "\"Homo sapiens\"",
     imageName: "Human",

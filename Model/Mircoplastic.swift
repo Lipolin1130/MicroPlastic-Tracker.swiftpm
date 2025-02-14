@@ -25,4 +25,10 @@ struct Microplastic: Hashable {// 單位：微克
         self.microfibers = microfibers
         self.microfragments = microfragments
     }
+    
+    mutating func addMicroplastic(microplastic: Microplastic) {
+        self.microbeads += microplastic.microbeads
+        self.microfibers += microplastic.microfibers
+        self.microfragments += microplastic.microfragments
+    }
 }
