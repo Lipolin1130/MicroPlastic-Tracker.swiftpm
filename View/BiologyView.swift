@@ -12,7 +12,6 @@ struct BiologyView: View {
     @Binding var microplastic: Microplastic
     let biology: BiologyInfo
     @State var showSheet = false
-    //    @State private var animationProgress = 0.0
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -49,17 +48,22 @@ struct BiologyView: View {
                             }
                             
                             LazyVStack(alignment: .leading, spacing: 0) {
-                                let textArray = Array((enabled ? biology.introduction : Utilities.randomString(changeLetter: biology.introduction)))
-                                let maxCharsPerLine = 35
-                                
-                                ForEach(0..<(textArray.count / maxCharsPerLine + 1), id: \.self) { lineIndex in
+                                let textArray = Array(enabled ? biology.introduction : Utilities.randomString(changeLetter: biology.introduction))
+                                let maxCharsPerLine = 37
+                                let totalLines = (textArray.count + maxCharsPerLine - 1) / maxCharsPerLine
+
+                                ForEach(0..<totalLines, id: \.self) { lineIndex in
+                                    let startIndex = lineIndex * maxCharsPerLine
+                                    let endIndex = min(startIndex + maxCharsPerLine, textArray.count)
+                                    let lineCharacters = Array(textArray[startIndex..<endIndex])
+
                                     HStack(spacing: 0) {
-                                        ForEach(textArray[lineIndex * maxCharsPerLine..<min((lineIndex + 1) * maxCharsPerLine, textArray.count)], id: \.self) { letter in
+                                        ForEach(Array(lineCharacters.enumerated()), id: \.offset) { index, letter in
                                             Text(String(letter))
                                                 .monospaced()
                                                 .font(.subheadline)
                                                 .opacity(enabled ? 1 : 0.5)
-                                                .animation(.easeInOut(duration: 2), value: enabled)
+                                                .animation(.easeInOut(duration: 0.5).delay(Double(index) / 40.0), value: enabled)
                                         }
                                     }
                                 }
