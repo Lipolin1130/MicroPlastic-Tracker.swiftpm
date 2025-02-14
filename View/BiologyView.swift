@@ -12,6 +12,8 @@ struct BiologyView: View {
     @Binding var microplastic: Microplastic
     let biology: BiologyInfo
     @State var showSheet = false
+    @State private var timer: Timer?
+    @State private var isUnlocking = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -51,12 +53,12 @@ struct BiologyView: View {
                                 let textArray = Array(enabled ? biology.introduction : Utilities.randomString(changeLetter: biology.introduction))
                                 let maxCharsPerLine = 37
                                 let totalLines = (textArray.count + maxCharsPerLine - 1) / maxCharsPerLine
-
+                                
                                 ForEach(0..<totalLines, id: \.self) { lineIndex in
                                     let startIndex = lineIndex * maxCharsPerLine
                                     let endIndex = min(startIndex + maxCharsPerLine, textArray.count)
                                     let lineCharacters = Array(textArray[startIndex..<endIndex])
-
+                                    
                                     HStack(spacing: 0) {
                                         ForEach(Array(lineCharacters.enumerated()), id: \.offset) { index, letter in
                                             Text(String(letter))
@@ -143,13 +145,16 @@ struct BiologyView: View {
                         } else {
                             //TODO: show alert
                         }
+                        
                     } label: {
-                        Label("Unlock", systemImage: "lock")
+                        Label("UNLOCK", systemImage: isUnlocking ? "lock.open" : "lock")
                             .font(.title2)
                             .padding(10)
                             .background(Color.gray)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .foregroundStyle(.white)
+                            .frame(width: 150)
+                        
                     }
                 }
                 .padding(.vertical, 20)
@@ -161,6 +166,14 @@ struct BiologyView: View {
         .sheet(isPresented: $showSheet) {
             BiologyDetailView(biology: biology, showSheet: $showSheet)
         }
+        .onAppear {
+            if unLock(need: biology.microplastic, got: microplastic) {
+                startUnlockAnimation()
+            }
+        }
+        .onDisappear {
+            stopUnlockAnimation()
+        }
     }
     
     func unLock(need: Microplastic, got: Microplastic) -> Bool {
@@ -171,6 +184,22 @@ struct BiologyView: View {
         } else {
             return false
         }
+    }
+    
+    func startUnlockAnimation() {
+        stopUnlockAnimation()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            DispatchQueue.main.async {
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    self.isUnlocking.toggle()
+                }
+            }
+        }
+    }
+    
+    func stopUnlockAnimation() {
+        timer?.invalidate()
+        timer = nil
     }
 }
 
