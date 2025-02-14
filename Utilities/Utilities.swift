@@ -8,20 +8,16 @@
 import SwiftUI
 
 struct Utilities {
-    static func randomString(changeLetter: String, enabled: Bool) -> String {
-        if enabled {
-            return changeLetter
-        } else {
-            let letters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}|;:'\",.<>?/`~"
-            
-            return String(changeLetter.map { char in
-                if char.isWhitespace || char == "\"" {
-                    return char
-                } else {
-                    return letters.randomElement()!
-                }
-            })
-        }
+    static func randomString(changeLetter: String) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}|;:'\",.<>?/`~"
+        
+        return String(changeLetter.map { char in
+            if char.isWhitespace || char == "\"" {
+                return char
+            } else {
+                return letters.randomElement()!
+            }
+        })
     }
 }
 
