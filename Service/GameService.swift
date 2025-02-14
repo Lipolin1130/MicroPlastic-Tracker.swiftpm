@@ -42,22 +42,32 @@ class GameService: ObservableObject {
         }
     }
     
-    func collectBiology(biology: Biology) {
-        if let index = collectedBiology.firstIndex(where: { $0.type == biology.type }) {
-            collectedBiology[index].count += 1
-            collectedMicroplastic.addMicroplastic(microplastic: biology.microplastic)
+    @MainActor
+    func collectBiology(biology: Biology) async {
+        DispatchQueue.main.async {
+            if let index = self.collectedBiology.firstIndex(where: { $0.type == biology.type }) {
+                self.collectedBiology[index].count += 1
+                self.collectedMicroplastic.addMicroplastic(microplastic: biology.microplastic)
+            }
+            
+            if let index = self.spawnedBiology.firstIndex(where: { $0.id == biology.id }) {
+                let newBiology = self.generateBiology()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    // generate new biology
+                    self.spawnedBiology[index] = newBiology
+                }
+            }
         }
-        
-        spawnedBiology.removeAll(where: { $0.id == biology.id })
-        
-        // generate new biology
-        spawnedBiology.append(generateBiology())
     }
     
     func generateBiology() -> Biology {
         let biologyTypes: [BiologyType] = collectedBiology.filter({ $0.enabled }).map({ $0.type })
         let type = biologyTypes.randomElement()!
-        return Biology(type: type)
+        return Biology(type: type,
+                       position: CGPoint(
+                        x: CGFloat.random(in: 50...500),
+                        y: CGFloat.random(in: 50...500)
+                       )
+        )
     }
-    
 }

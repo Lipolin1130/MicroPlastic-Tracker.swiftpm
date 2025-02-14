@@ -27,32 +27,43 @@ struct GameView: View {
                     }
                     
                     Spacer()
-                    
-                    Image(systemName: "books.vertical")
+                    NavigationLink {
+                        MuseumView()
+                    } label: {
+                        Image(systemName: "books.vertical")
+                    }
                     
                 }
                 .font(.system(size: 60))
                 .monospaced()
                 .frame(height: 80, alignment: .top)
                 
-                Spacer()
-                
                 GeometryReader { geometry in // Playing Area
-                    ForEach(gameService.spawnedBiology, id: \.self) { biology in
-                        GameBiologyView(biology: biology, areaSize: $playingAreaSize) {
-                            gameService.collectBiology(biology: biology)
+                    let safeHeight = max(geometry.size.height - geometry.safeAreaInsets.bottom - 80, 500)
+                    let newSize = CGSize(width: geometry.size.width, height: safeHeight)
+                    
+                    VStack {
+                        ForEach(gameService.spawnedBiology, id: \.id) { biology in
+                            if playingAreaSize.width > 0 && playingAreaSize.height > 0 {
+                                GameBiologyView(biology: biology, areaSize: $playingAreaSize) {
+                                    Task {
+                                        await gameService.collectBiology(biology: biology)
+                                    }
+                                }
+                            }
                         }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onAppear {
-                        playingAreaSize = geometry.size
-                        print(playingAreaSize.width, playingAreaSize.height)
+                        DispatchQueue.main.async {
+                            playingAreaSize = newSize
+                            print(playingAreaSize.width, playingAreaSize.height)
+                        }
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .padding(30)
         }
-        
     }
 }
 

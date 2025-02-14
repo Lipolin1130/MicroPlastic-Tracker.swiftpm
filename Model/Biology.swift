@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Biology: Hashable, Equatable {
+struct Biology: Hashable, Equatable, Identifiable {
     let id = UUID()
     var type: BiologyType
     var microplastic: Microplastic {// generate random microplastic by type
@@ -31,4 +31,5 @@ struct Biology: Hashable, Equatable {
         case .human: return Double.random(in: 100...200)
         }
     }
+    var position: CGPoint
 }

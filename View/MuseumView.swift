@@ -80,13 +80,6 @@ struct MuseumView: View {
                 
             }
         }
-        .onAppear {
-            gameService.collectedMicroplastic = Microplastic(
-                microbeads: 2000,
-                microfibers: 2000,
-                microfragments: 2000
-            )
-        }
     }
 }
 

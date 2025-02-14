@@ -10,7 +10,6 @@ import Foundation
 struct BiologyInfo: Hashable {
     let type: BiologyType
     let scientificName: String
-    let imageName: String
     let introduction: String
     let characteristics: String
     let habitat: String

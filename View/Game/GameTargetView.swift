@@ -20,7 +20,7 @@ struct GameTargetView: View {
                 .scaledToFit()
                 .frame(height: 60)
             
-            Text("\(get, specifier: "%.1f") / \(get, specifier: "%.1f")")
+            Text("\(get, specifier: "%.1f") / \(target, specifier: "%.1f")")
                 .font(.title2)
         }
         .frame(width: 300)

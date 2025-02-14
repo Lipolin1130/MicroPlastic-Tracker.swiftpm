@@ -96,7 +96,7 @@ struct BiologyView: View {
                     .fill(Color.gray)
                     .frame(width: 225, height: 225)
                     .overlay {
-                        Image(biology.imageName)
+                        Image(biology.type.imageName())
                             .resizable()
                             .shilhouette(enabled: enabled)
                             .scaledToFit()

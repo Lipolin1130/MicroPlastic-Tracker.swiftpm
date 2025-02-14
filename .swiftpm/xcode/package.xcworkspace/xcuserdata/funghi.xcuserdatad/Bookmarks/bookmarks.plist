@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>13</string>
+					<string>16</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>12</string>
+					<string>15</string>
 					<key>Timestamp</key>
-					<string>761215579.721128</string>
+					<string>761225855.742214</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -27,27 +27,27 @@
 					<key>payload</key>
 					<dict>
 						<key>relative-path</key>
-						<string>Model/BiologyInfo.swift</string>
+						<string>View/Game/GameVIew.swift</string>
 					</dict>
 				</dict>
 			</dict>
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>    let imageName: String
+				<string>                    Image(systemName: "questionmark.circle")
 </string>
 				<key>leading</key>
-				<string>    let type: BiologyType
-    let scientificName: String
+				<string>                HStack {
+                    
 </string>
 				<key>trailing</key>
-				<string>    let introduction: String
-    let characteristics: String
-    let habitat: String
+				<string>                    
+                    Spacer()
+                    
 </string>
 			</dict>
 			<key>title</key>
-			<string>remoe this use type.imageName</string>
+			<string>//TODO: sheet View or Tab View</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

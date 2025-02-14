@@ -15,7 +15,7 @@ struct BiologyDetailView: View {
         ScrollView {
             ZStack {
                 VStack(alignment: .center, spacing: 15) {
-                    Image(biology.imageName)
+                    Image(biology.type.imageName())
                         .resizable()
                         .scaledToFit()
                         .frame(height: 400)
