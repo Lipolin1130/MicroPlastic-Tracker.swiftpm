@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MuseumIntroView: View {
+struct GoalView: View {
     
     @EnvironmentObject var gameService: GameService
     var body: some View {
@@ -28,7 +28,7 @@ struct MuseumIntroView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color("ButtonColor"))
                     
-                    Text(microfragments.introduction)
+                    Text("\(microbeads.introduction)")
                         .font(.title2)
                 }
                 .frame(width: 700, height: 150)
@@ -60,6 +60,6 @@ struct MuseumIntroView: View {
 }
 
 #Preview {
-    MuseumIntroView()
+    GoalView()
         .environmentObject(GameService())
 }

@@ -11,6 +11,7 @@ struct BiologyDetailView: View {
     
     let biology: BiologyInfo
     @Binding var showSheet: Bool
+    
     var body: some View {
         ScrollView {
             ZStack {

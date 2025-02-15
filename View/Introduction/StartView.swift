@@ -29,7 +29,7 @@ struct StartView: View {
                     Button {
                         //TODO: next page
                     } label: {
-                        Text("Start")
+                        Text("Start")//TODO: START animation
                             .foregroundStyle(Color("textColor"))
                             .font(.largeTitle)
                             .padding(20)
