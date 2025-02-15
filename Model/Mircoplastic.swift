@@ -6,21 +6,11 @@
 //
 
 struct Microplastic: Hashable {// 單位：微克
-    var microbeads: Double
-    var microfibers: Double
-    var microfragments: Double
+    var microbeads: Int
+    var microfibers: Int
+    var microfragments: Int
     
-    init(content: Double) {
-        let ratio1 = Double.random(in: 0...1)
-        let ratio2 = Double.random(in: 0...(1 - ratio1))
-        let ratio3 = 1 - ratio1 - ratio2
-        
-        self.microbeads = content * ratio1
-        self.microfibers = content * ratio2
-        self.microfragments = content * ratio3
-    }
-    
-    init(microbeads: Double, microfibers: Double, microfragments: Double) {
+    init(microbeads: Int, microfibers: Int, microfragments: Int) {
         self.microbeads = microbeads
         self.microfibers = microfibers
         self.microfragments = microfragments

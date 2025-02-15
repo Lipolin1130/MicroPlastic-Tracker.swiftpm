@@ -58,7 +58,7 @@ struct MuseumView: View {
                             .scaledToFit()
                             .frame(height: 60)
                         
-                        Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                        Text("\(gameService.collectedMicroplastic.microbeads)")
                             .font(.largeTitle)
                         
                         Image(microfibers.imageName)
@@ -66,7 +66,7 @@ struct MuseumView: View {
                             .scaledToFit()
                             .frame(height: 60)
                         
-                        Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                        Text("\(gameService.collectedMicroplastic.microbeads)")
                             .font(.largeTitle)
                         
                         Image(microfragments.imageName)
@@ -74,7 +74,7 @@ struct MuseumView: View {
                             .scaledToFit()
                             .frame(height: 60)
                         
-                        Text("\(gameService.collectedMicroplastic.microfragments, specifier: "%.1f")")
+                        Text("\(gameService.collectedMicroplastic.microfragments)")
                             .font(.largeTitle)
                     }
                     .monospaced()

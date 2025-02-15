@@ -17,9 +17,9 @@ let salp = BiologyInfo(
     size: "1.0",
     torphicLevel: .primaryProducer,
     microplastic: Microplastic(
-        microbeads: 0,
-        microfibers: 0,
-        microfragments: 0
+        microbeads: 3,
+        microfibers: 2,
+        microfragments: 2
     )
 )
 
@@ -32,9 +32,9 @@ let northernPrawn = BiologyInfo(
     size: "16.5",
     torphicLevel: .primaryConsumer,
     microplastic: Microplastic(
-        microbeads: 0,
-        microfibers: 0,
-        microfragments: 0
+        microbeads: 10,
+        microfibers: 15,
+        microfragments: 12
     )
 )
 
@@ -47,9 +47,9 @@ let anchovy = BiologyInfo(
     size: "10.0",
     torphicLevel: .secondaryConsumer,
     microplastic: Microplastic(
-        microbeads: 10,
-        microfibers: 10,
-        microfragments: 10
+        microbeads: 50,
+        microfibers: 48,
+        microfragments: 54
     )
 )
 
@@ -63,9 +63,9 @@ let skipjackTuna = BiologyInfo(
     size: "100.0",
     torphicLevel: .secondaryConsumer,
     microplastic: Microplastic(
-        microbeads: 100,
-        microfibers: 100,
-        microfragments: 100
+        microbeads: 258,
+        microfibers: 264,
+        microfragments: 280
     )
 )
 
@@ -78,9 +78,9 @@ let atlanticBluefineTuna = BiologyInfo(
     size: "460.0",
     torphicLevel: torphicLevelType.tertiaryConsumer,
     microplastic: Microplastic(
-        microbeads: 300,
-        microfibers: 300,
-        microfragments: 300
+        microbeads: 872,
+        microfibers: 940,
+        microfragments: 900
     )
 )
 
@@ -94,8 +94,8 @@ let human = BiologyInfo(
     size: "170",
     torphicLevel: .topPredator,
     microplastic: Microplastic(
-        microbeads: 1000,
-        microfibers: 1000,
-        microfragments: 1000
+        microbeads: 2000,
+        microfibers: 2000,
+        microfragments: 2000
     )
 )

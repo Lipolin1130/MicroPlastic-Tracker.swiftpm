@@ -30,6 +30,34 @@ struct BiologyDetailView: View {
                         .italic()
                         .bold()
                     
+                    HStack(spacing: 15) {
+                        Image(microfragments.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 35)
+                        Text("\(biology.microplastic.microfragments)")
+                        
+                        Image(microfibers.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 35)
+                        Text("\(biology.microplastic.microfibers)")
+                        
+                        Image(microbeads.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 35)
+                        Text("\(biology.microplastic.microbeads)")
+                        
+                        Text("/")
+                            .font(.largeTitle)
+                        
+                        Image(biology.type.imageName())
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 50)
+                    }
+                    
                     VStack (alignment: .leading, spacing: 20){
                         Text(biology.introduction)
                         
@@ -41,12 +69,10 @@ struct BiologyDetailView: View {
                 
                 VStack {
                     HStack {
-                        VStack(alignment: .leading, spacing: 5) {
+                        VStack(alignment: .leading, spacing: 10) {
                             Text(biology.torphicLevel.rawValue)
                                 .bold()
                                 .font(.title3)
-                            
-                            Text(biology.size)
                         }
                         
                         Spacer()

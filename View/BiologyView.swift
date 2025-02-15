@@ -116,7 +116,7 @@ struct BiologyView: View {
                             .scaledToFit()
                             .frame(height: 40)
                         
-                        Text("\(biology.microplastic.microbeads, specifier: "%.1f")")
+                        Text("\(biology.microplastic.microbeads)")
                             .font(.title3)
                         
                         Image(microfibers.imageName)
@@ -124,7 +124,7 @@ struct BiologyView: View {
                             .scaledToFit()
                             .frame(height: 40)
                         
-                        Text("\(biology.microplastic.microbeads, specifier: "%.1f")")
+                        Text("\(biology.microplastic.microbeads)")
                             .font(.title3)
                         
                         Image(microfragments.imageName)
@@ -132,7 +132,7 @@ struct BiologyView: View {
                             .scaledToFit()
                             .frame(height: 40)
                         
-                        Text("\(biology.microplastic.microfragments, specifier: "%.1f")")
+                        Text("\(biology.microplastic.microfragments)")
                             .font(.title3)
                     }
                     .padding(.trailing, 20)
@@ -208,7 +208,9 @@ struct BiologyView: View {
 #Preview {
     BiologyView(
         enabled: .constant(false),
-        microplastic: .constant(Microplastic(content: 0)),
+        microplastic: .constant(
+            Microplastic(microbeads: 0, microfibers: 0, microfragments: 0)
+        ),
         biology: human,
         firstIntro: true
     )

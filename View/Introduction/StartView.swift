@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct StartView: View {
-    
-    let title = "Microplastic Tracker"
     var body: some View {
         NavigationStack {
             ZStack {
@@ -20,29 +18,28 @@ struct StartView: View {
                 
                 VStack {
                     Spacer()
-                    Text(title)
+                    Text(appTitle)
                         .font(.largeTitle)
                         .padding(.top, 250)
                     
                     Spacer()
                     
-                    Button {
-                        //TODO: next page
-                    } label: {
-                        Text("Start")//TODO: START animation
-                            .foregroundStyle(Color("textColor"))
-                            .font(.largeTitle)
-                            .padding(20)
-                            .background(Color("ButtonColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .frame(width: 200)
-                    }
-                    .padding(.top, 150)
+                        NavigationLink {
+                            MicroplasticIntroView()
+                        } label: {
+                            Text("Start")//TODO: START animation
+                                .foregroundStyle(Color("textColor"))
+                                .font(.largeTitle)
+                                .padding(20)
+                                .background(Color("ButtonColor"))
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .frame(width: 200)
+                                .padding(.top, 150)
+                        }
                     
                     Spacer()
                 }
                 .monospaced()
-                
             }
         }
     }

@@ -247,13 +247,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>8</string>
+					<string>10</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>7</string>
+					<string>9</string>
 					<key>Timestamp</key>
-					<string>761300926.8382</string>
+					<string>761303615.750351</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -272,12 +272,11 @@
 				<string>let goal: String = ""
 </string>
 				<key>leading</key>
-				<string>//
+				<string>let appTitle = "Microplastic Tracker"
 
 </string>
 				<key>trailing</key>
-				<string>
-</string>
+				<string></string>
 			</dict>
 			<key>title</key>
 			<string>Add goal description in GoalView </string>
@@ -292,13 +291,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>32</string>
+					<string>30</string>
 					<key>StartingColumnNumber</key>
-					<string>60</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>31</string>
+					<string>29</string>
 					<key>Timestamp</key>
-					<string>761299928.004257</string>
+					<string>761303981.033554</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -314,16 +313,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>                            Text("Start")//TODO: START animation
 </string>
 				<key>leading</key>
-				<string>                        //TODO: next page
-                    } label: {
-                        Text("Start")//TODO: START animation</string>
+				<string>                            MicroplasticIntroView()
+                        } label: {
+</string>
 				<key>trailing</key>
-				<string>                            .foregroundStyle(Color("textColor"))
-                            .font(.largeTitle)
-                            .padding(20)
+				<string>                                .foregroundStyle(Color("textColor"))
+                                .font(.largeTitle)
+                                .padding(20)
 </string>
 			</dict>
 			<key>title</key>
@@ -370,11 +369,58 @@
 				<key>trailing</key>
 				<string>                        .font(.title2)
                 }
-                .frame(width: 700, height: 150)
+                .frame(width: 600, height: 150)
 </string>
 			</dict>
 			<key>title</key>
 			<string>change text to goal</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>24</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>23</string>
+					<key>Timestamp</key>
+					<string>761301708.50634</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Model/Biology.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>    var size: Double {
+</string>
+				<key>leading</key>
+				<string>    }
+    
+</string>
+				<key>trailing</key>
+				<string>        switch type {
+        case .salp: return Double.random(in: 10...15)
+        case .shrimp: return Double .random(in: 10...30)
+</string>
+			</dict>
+			<key>title</key>
+			<string>change size in image </string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

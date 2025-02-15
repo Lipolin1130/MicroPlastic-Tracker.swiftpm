@@ -85,8 +85,8 @@ struct MicroplasticIntroView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Button {
-                        //TODO: next page
+                    NavigationLink {
+                        GoalView()
                     } label: {
                         Text("Next")
                             .foregroundStyle(Color("textColor"))

@@ -65,6 +65,7 @@ struct GameView: View {
             }
             .padding(30)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -12,12 +12,12 @@ struct Biology: Hashable, Equatable, Identifiable {
     var type: BiologyType
     var microplastic: Microplastic {// generate random microplastic by type
         switch type {
-        case .salp: return Microplastic(content: Double.random(in: 0...5))
-        case .shrimp: return Microplastic(content: Double.random(in: 5...20))
-        case .anchovy: return Microplastic(content: Double.random(in: 20...100))
-        case .skipjackTuna: return Microplastic(content: Double.random(in: 100...500))
-        case .tuna: return Microplastic(content: Double.random(in: 500...5000))
-        case .human: return Microplastic(content: Double.random(in: 5000...50000))
+        case .salp: return salp.microplastic
+        case .shrimp: return northernPrawn.microplastic
+        case .anchovy: return anchovy.microplastic
+        case .skipjackTuna: return skipjackTuna.microplastic
+        case .tuna: return atlanticBluefineTuna.microplastic
+        case .human: return human.microplastic
         }
     }
     

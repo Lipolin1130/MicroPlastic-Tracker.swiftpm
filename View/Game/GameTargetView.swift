@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GameTargetView: View {
     
-    let target: Double
-    let get: Double
+    let target: Int
+    let get: Int
     let imageName: String
     
     var body: some View {
@@ -20,7 +20,7 @@ struct GameTargetView: View {
                 .scaledToFit()
                 .frame(height: 60)
             
-            Text("\(get, specifier: "%.1f") / \(target, specifier: "%.1f")")
+            Text("\(get) / \(target)")
                 .font(.title2)
         }
         .frame(width: 300)

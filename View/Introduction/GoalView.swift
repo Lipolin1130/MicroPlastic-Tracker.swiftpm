@@ -12,7 +12,7 @@ struct GoalView: View {
     @EnvironmentObject var gameService: GameService
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(alignment: .center, spacing: 30) {
+            HStack(alignment: .center, spacing: 40) {
                 VStack {
                     Image(microbeads.imageName)
                         .resizable()
@@ -31,7 +31,39 @@ struct GoalView: View {
                     Text("\(microbeads.introduction)")
                         .font(.title2)
                 }
-                .frame(width: 700, height: 150)
+                .frame(width: 600, height: 150)
+                
+                HStack(spacing: 30) {
+                    VStack(spacing: 15) {
+                        Image(microfragments.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 80)
+                        
+                        Text("2000")
+                            .font(.title2)
+                    }
+                    
+                    VStack(spacing: 15) {
+                        Image(microfibers.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 80)
+                        
+                        Text("2000")
+                            .font(.title2)
+                    }
+                    
+                    VStack(spacing: 15) {
+                        Image(microbeads.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 80)
+                        
+                        Text("2000")
+                            .font(.title2)
+                    }
+                }
             }
             .padding([.horizontal], 30)
             
@@ -40,8 +72,8 @@ struct GoalView: View {
             HStack {
                 Spacer()
                 
-                Button {
-                    //TODO: next page
+                NavigationLink {
+                    GameView()
                 } label: {
                     Text("Next")
                         .foregroundStyle(Color("textColor"))

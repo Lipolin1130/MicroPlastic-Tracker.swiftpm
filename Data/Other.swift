@@ -5,5 +5,6 @@
 //  Created by 李柏霖 on 2025/2/15.
 //
 
-let goal: String = ""
+let appTitle = "Microplastic Tracker"
 
+let goal: String = ""
