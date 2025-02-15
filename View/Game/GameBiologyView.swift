@@ -61,7 +61,7 @@ struct GameBiologyView: View {
         
         position.y = min(position.y, areaSize.height - halfHeight)
         
-        print("Updated Position - x:", position.x, "y:", position.y, "areaSize.height:", areaSize.height)
+//        print("Updated Position - x:", position.x, "y:", position.y, "areaSize.height:", areaSize.height)
     }
     
     private func startMoving() {
@@ -73,7 +73,7 @@ struct GameBiologyView: View {
                         y: CGFloat.random(in: 50...(areaSize.height - 100))
                     )
                     
-                    print(position.x, position.y)
+//                    print(position.x, position.y)
                 }
             }
         }

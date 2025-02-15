@@ -86,7 +86,7 @@ struct MicroplasticIntroView: View {
                 HStack {
                     Spacer()
                     NavigationLink {
-                        GoalView()
+                        GoalView(getFromSheet: false)
                     } label: {
                         Text("Next")
                             .foregroundStyle(Color("textColor"))

@@ -10,6 +10,8 @@ import SwiftUI
 struct GoalView: View {
     
     @EnvironmentObject var gameService: GameService
+    var getFromSheet: Bool
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center, spacing: 40) {
@@ -40,7 +42,7 @@ struct GoalView: View {
                             .scaledToFit()
                             .frame(height: 80)
                         
-                        Text("2000")
+                        Text("5000")
                             .font(.title2)
                     }
                     
@@ -50,7 +52,7 @@ struct GoalView: View {
                             .scaledToFit()
                             .frame(height: 80)
                         
-                        Text("2000")
+                        Text("5000")
                             .font(.title2)
                     }
                     
@@ -60,7 +62,7 @@ struct GoalView: View {
                             .scaledToFit()
                             .frame(height: 80)
                         
-                        Text("2000")
+                        Text("5000")
                             .font(.title2)
                     }
                 }
@@ -69,19 +71,21 @@ struct GoalView: View {
             
             MuseumView(firstIntro: true)
             
-            HStack {
-                Spacer()
-                
-                NavigationLink {
-                    GameView()
-                } label: {
-                    Text("Next")
-                        .foregroundStyle(Color("textColor"))
-                        .font(.title2)
-                        .padding(18)
-                        .frame(width: 120)
-                        .background(Color("ButtonColor"))
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
+            if !getFromSheet {
+                HStack {
+                    Spacer()
+                    
+                    NavigationLink {
+                        GameView()
+                    } label: {
+                        Text("Next")
+                            .foregroundStyle(Color("textColor"))
+                            .font(.title2)
+                            .padding(18)
+                            .frame(width: 120)
+                            .background(Color("ButtonColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }
                 }
             }
         }
@@ -92,6 +96,6 @@ struct GoalView: View {
 }
 
 #Preview {
-    GoalView()
+    GoalView(getFromSheet: false)
         .environmentObject(GameService())
 }

@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct BiologyView: View {
+    @EnvironmentObject var gameService: GameService
     @Binding var enabled: Bool
     @Binding var microplastic: Microplastic
-    let biology: BiologyInfo
     @State var showSheet = false
     @State private var timer: Timer?
     @State private var isUnlocking = false
     
+    let biology: BiologyInfo
     let firstIntro: Bool
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(biology.torphicLevel.rawValue)
@@ -77,8 +79,6 @@ struct BiologyView: View {
                                 Button {
                                     if enabled {
                                         showSheet.toggle()
-                                    } else {
-                                        
                                     }
                                 } label: {
                                     Text("See more...")
@@ -141,11 +141,9 @@ struct BiologyView: View {
                             withAnimation {
                                 enabled = true
                             }
-                            
-                        } else {
-                            
+                            gameService.collectedMicroplastic.minusMicroplastic(microplastic: biology.microplastic)
                         }
-                        
+    
                     } label: {
                         Label("UNLOCK", systemImage: isUnlocking ? "lock.open" : "lock")
                             .font(.title2)
@@ -213,4 +211,5 @@ struct BiologyView: View {
         biology: human,
         firstIntro: true
     )
+    .environmentObject(GameService())
 }

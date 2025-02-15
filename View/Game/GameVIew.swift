@@ -3,7 +3,7 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var gameService: GameService
     @State private var playingAreaSize: CGSize = .zero
-    
+    @State private var showSheet = false
     var body: some View {
         ZStack {
             Image("background")
@@ -12,8 +12,11 @@ struct GameView: View {
             
             VStack {
                 HStack {
-                    
-                    Image(systemName: "questionmark.circle")
+                    Button {
+                        showSheet = true
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                    }
                     
                     Spacer()
                     
@@ -58,7 +61,7 @@ struct GameView: View {
                     .onAppear {
                         DispatchQueue.main.async {
                             playingAreaSize = newSize
-                            print(playingAreaSize.width, playingAreaSize.height)
+//                            print(playingAreaSize.width, playingAreaSize.height)
                         }
                     }
                 }
@@ -66,6 +69,9 @@ struct GameView: View {
             .padding(30)
         }
         .navigationBarBackButtonHidden()
+        .sheet(isPresented: $showSheet) {
+            GoalView(getFromSheet: true)
+        }
     }
 }
 

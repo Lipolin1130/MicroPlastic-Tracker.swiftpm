@@ -30,12 +30,15 @@ struct StartView: View {
                 
                 if startButton {
                     VStack {
-                        Image("microplasticFishEat")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 300)
-                            .padding(.bottom, 150)
-                        
+                        NavigationLink {
+                            MicroplasticIntroView()
+                        } label: {
+                            Image("microplasticFishEat")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 300)
+                                .padding(.bottom, 150)
+                        }
                     }
                 } else {
                     VStack {

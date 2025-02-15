@@ -61,7 +61,7 @@ struct MuseumView: View {
                             .scaledToFit()
                             .frame(height: 60)
                         
-                        Text("\(gameService.collectedMicroplastic.microbeads)")
+                        Text("\(gameService.collectedMicroplastic.microfibers)")
                             .font(.largeTitle)
                         
                         Image(microfragments.imageName)
