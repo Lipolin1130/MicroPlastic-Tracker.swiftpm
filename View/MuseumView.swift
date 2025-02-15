@@ -16,6 +16,8 @@ struct MuseumView: View {
         skipjackTuna, atlanticBluefineTuna, human
     ]
     
+    let firstIntro: Bool
+    
     var body: some View {
         ZStack {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -25,11 +27,12 @@ struct MuseumView: View {
                             $0.type == bio.type
                         }) {
                             BiologyView(
-                                enabled: $gameService.collectedBiology[index].enabled,
+                                enabled: !firstIntro ? $gameService.collectedBiology[index].enabled: .constant(false),
                                 microplastic: $gameService.collectedMicroplastic,
-                                biology: bio
+                                biology: bio,
+                                firstIntro: firstIntro
                             )
-                            .padding(.top, 80)
+                            .padding(.top, firstIntro ? 10 : 80)
                             
                             if index != gameService.collectedBiology.count - 1 {
                                 Image(systemName: "arrowshape.right.fill")
@@ -44,47 +47,49 @@ struct MuseumView: View {
                 .padding(.horizontal, 50)
             }
             
-            VStack {
-                HStack(alignment: .bottom, spacing: 30) {
+            if !firstIntro {
+                VStack {
+                    HStack(alignment: .bottom, spacing: 30) {
+                        
+                        Spacer()
+                        
+                        Image(microbeads.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 60)
+                        
+                        Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                            .font(.largeTitle)
+                        
+                        Image(microfibers.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 60)
+                        
+                        Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
+                            .font(.largeTitle)
+                        
+                        Image(microfragments.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 60)
+                        
+                        Text("\(gameService.collectedMicroplastic.microfragments, specifier: "%.1f")")
+                            .font(.largeTitle)
+                    }
+                    .monospaced()
+                    .padding(.horizontal, 30)
                     
                     Spacer()
                     
-                    Image(microbeads.imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 60)
-                    
-                    Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
-                        .font(.largeTitle)
-                    
-                    Image(microfibers.imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 60)
-                    
-                    Text("\(gameService.collectedMicroplastic.microbeads, specifier: "%.1f")")
-                        .font(.largeTitle)
-                    
-                    Image(microfragments.imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 60)
-                    
-                    Text("\(gameService.collectedMicroplastic.microfragments, specifier: "%.1f")")
-                        .font(.largeTitle)
                 }
-                .monospaced()
-                .padding(.horizontal, 30)
-                
-                Spacer()
-                
             }
         }
     }
 }
 
 #Preview {
-    MuseumView()
+    MuseumView(firstIntro: true)
         .environmentObject(GameService())
 }
 

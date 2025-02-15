@@ -27,8 +27,9 @@ struct GameView: View {
                     }
                     
                     Spacer()
+                    
                     NavigationLink {
-                        MuseumView()
+                        MuseumView(firstIntro: false)
                     } label: {
                         Image(systemName: "books.vertical")
                     }

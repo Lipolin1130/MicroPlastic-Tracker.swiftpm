@@ -51,6 +51,194 @@
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>147</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>146</string>
+					<key>Timestamp</key>
+					<string>761297635.8306791</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/BiologyView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                            
+</string>
+				<key>leading</key>
+				<string>                            
+                        } else {
+</string>
+				<key>trailing</key>
+				<string>                        }
+                        
+                    } label: {
+</string>
+			</dict>
+			<key>title</key>
+			<string>show alert</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>82</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>81</string>
+					<key>Timestamp</key>
+					<string>761297635.8306479</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/BiologyView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                                        
+</string>
+				<key>leading</key>
+				<string>                                        showSheet.toggle()
+                                    } else {
+</string>
+				<key>trailing</key>
+				<string>                                    }
+                                } label: {
+                                    Text("See more...")
+</string>
+			</dict>
+			<key>title</key>
+			<string>show alert</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>30</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>29</string>
+					<key>Timestamp</key>
+					<string>761248060.787182</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/StartView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                        //TODO: next page
+</string>
+				<key>leading</key>
+				<string>                    
+                    Button {
+</string>
+				<key>trailing</key>
+				<string>                    } label: {
+                        Text("Start")
+                            .foregroundStyle(Color("textColor"))
+</string>
+			</dict>
+			<key>title</key>
+			<string>add animation to jump page</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>44</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>43</string>
+					<key>Timestamp</key>
+					<string>761298974.6013891</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/Introduction/MuseumIntroView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                    //TODO: next page
+</string>
+				<key>leading</key>
+				<string>                
+                Button {
+</string>
+				<key>trailing</key>
+				<string>                } label: {
+                    Text("Next")
+                        .foregroundStyle(Color("textColor"))
+</string>
+			</dict>
+			<key>title</key>
+			<string>Next View</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
 	</array>
 </dict>
 </plist>

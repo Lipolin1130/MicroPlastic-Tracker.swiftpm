@@ -15,6 +15,7 @@ struct BiologyView: View {
     @State private var timer: Timer?
     @State private var isUnlocking = false
     
+    let firstIntro: Bool
     var body: some View {
         VStack(alignment: .leading) {
             Text(biology.torphicLevel.rawValue)
@@ -78,7 +79,7 @@ struct BiologyView: View {
                                     if enabled {
                                         showSheet.toggle()
                                     } else {
-                                        //TODO: show alert
+                                        
                                     }
                                 } label: {
                                     Text("See more...")
@@ -143,7 +144,7 @@ struct BiologyView: View {
                             }
                             
                         } else {
-                            //TODO: show alert
+                            
                         }
                         
                     } label: {
@@ -156,13 +157,14 @@ struct BiologyView: View {
                             .frame(width: 140)
                         
                     }
+                    .disabled(firstIntro)
                 }
                 .padding(.vertical, 20)
             }
         }
         .monospaced()
         .padding([.top, .leading, .bottom], 30)
-        .frame(width: 650, height: 500, alignment: .topLeading)
+        .frame(width: 650, height: 425, alignment: .topLeading)
         .sheet(isPresented: $showSheet) {
             BiologyDetailView(biology: biology, showSheet: $showSheet)
         }
@@ -207,6 +209,7 @@ struct BiologyView: View {
     BiologyView(
         enabled: .constant(false),
         microplastic: .constant(Microplastic(content: 0)),
-        biology: human
+        biology: human,
+        firstIntro: true
     )
 }
