@@ -23,7 +23,6 @@ struct BiologyView: View {
                 .padding(.bottom, 30)
             
             ZStack(alignment: .leading) {
-                
                 RoundedRectangle(cornerRadius: 30)
                     .fill(Color.gray.opacity(0.3))
                     .frame(width: 500, height: 225)

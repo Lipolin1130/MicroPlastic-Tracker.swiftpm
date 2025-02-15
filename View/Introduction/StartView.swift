@@ -8,24 +8,50 @@
 import SwiftUI
 
 struct StartView: View {
+    @State private var startButton: Bool = false
+    @State private var offsetY: CGFloat = 0
+    @State private var imageOppacity: Double = 1.0
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("coverImage")
+                Image("background")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
                 
-                VStack {
-                    Spacer()
-                    Text(appTitle)
-                        .font(.largeTitle)
-                        .padding(.top, 250)
-                    
-                    Spacer()
-                    
-                        NavigationLink {
-                            MicroplasticIntroView()
+                Image("coverImage")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .offset(y: offsetY)
+                    .opacity(imageOppacity)
+                    .animation(.easeInOut(duration: 2), value: imageOppacity)
+                
+                if startButton {
+                    VStack {
+                        Image("microplasticFishEat")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300)
+                            .padding(.bottom, 150)
+                        
+                    }
+                } else {
+                    VStack {
+                        Spacer()
+                        Text(appTitle)
+                            .font(.largeTitle)
+                            .padding(.top, 250)
+                        
+                        Spacer()
+                        
+                        Button {
+                            withAnimation(.easeInOut(duration: 2)) {
+                                offsetY = -UIScreen.main.bounds.height
+                                imageOppacity = 0
+                                startButton = true
+                            }
                         } label: {
                             Text("Start")//TODO: START animation
                                 .foregroundStyle(Color("textColor"))
@@ -36,11 +62,11 @@ struct StartView: View {
                                 .frame(width: 200)
                                 .padding(.top, 150)
                         }
-                    
-                    Spacer()
+                        Spacer()
+                    }
                 }
-                .monospaced()
             }
+            .monospaced()
         }
     }
 }

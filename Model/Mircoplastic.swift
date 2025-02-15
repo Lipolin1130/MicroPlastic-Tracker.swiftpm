@@ -21,4 +21,8 @@ struct Microplastic: Hashable {// 單位：微克
         self.microfibers += microplastic.microfibers
         self.microfragments += microplastic.microfragments
     }
+    
+    func addAll() -> Int {
+        return (self.microbeads + self.microfibers + self.microfragments)
+    }
 }

@@ -59,13 +59,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>147</string>
+					<string>146</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>146</string>
+					<string>145</string>
 					<key>Timestamp</key>
-					<string>761297635.8306791</string>
+					<string>761306627.336387</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -106,13 +106,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>82</string>
+					<string>81</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>81</string>
+					<string>80</string>
 					<key>Timestamp</key>
-					<string>761297635.8306479</string>
+					<string>761306627.336418</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -276,7 +276,10 @@
 
 </string>
 				<key>trailing</key>
-				<string></string>
+				<string>
+let biology: [BiologyInfo] = [
+    salp, northernPrawn, anchovy,
+</string>
 			</dict>
 			<key>title</key>
 			<string>Add goal description in GoalView </string>
@@ -291,13 +294,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>30</string>
+					<string>56</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>29</string>
+					<string>55</string>
 					<key>Timestamp</key>
-					<string>761303981.033554</string>
+					<string>761322580.1881911</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -316,7 +319,7 @@
 				<string>                            Text("Start")//TODO: START animation
 </string>
 				<key>leading</key>
-				<string>                            MicroplasticIntroView()
+				<string>                            }
                         } label: {
 </string>
 				<key>trailing</key>
@@ -421,6 +424,53 @@
 			</dict>
 			<key>title</key>
 			<string>change size in image </string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>48</string>
+					<key>StartingColumnNumber</key>
+					<string>73</string>
+					<key>StartingLineNumber</key>
+					<string>47</string>
+					<key>Timestamp</key>
+					<string>761309093.8347239</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/Game/RewardView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>
+</string>
+				<key>leading</key>
+				<string>                        .fill(Color("ButtonColor"))
+      
+                    Text("\(gameService.collectedMicroplastic.addAll())")</string>
+				<key>trailing</key>
+				<string>                        .font(.title2)
+                        .bold()
+                        .italic()
+</string>
+			</dict>
+			<key>title</key>
+			<string>Bold, itlatic the account</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

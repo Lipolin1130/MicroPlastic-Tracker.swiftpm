@@ -11,11 +11,6 @@ struct MuseumView: View {
     
     @EnvironmentObject private var gameService: GameService
     
-    let biology: [BiologyInfo] = [
-        salp, northernPrawn, anchovy,
-        skipjackTuna, atlanticBluefineTuna, human
-    ]
-    
     let firstIntro: Bool
     
     var body: some View {
@@ -89,7 +84,7 @@ struct MuseumView: View {
 }
 
 #Preview {
-    MuseumView(firstIntro: true)
+    MuseumView(firstIntro: false)
         .environmentObject(GameService())
 }
 

@@ -100,7 +100,7 @@ struct MicroplasticIntroView: View {
             }
         }
         .monospaced()
-        .padding([.horizontal, .bottom], 20)
+        .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
