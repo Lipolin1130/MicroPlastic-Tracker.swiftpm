@@ -14,8 +14,8 @@ struct GameView: View {
             
             VStack {
                 HStack {
-                    Button {
-                        showSheet = true
+                    NavigationLink {
+                        GoalView(getFromSheet: true)
                     } label: {
                         Image(systemName: "questionmark.circle")
                     }
@@ -24,11 +24,11 @@ struct GameView: View {
                     
                     HStack(spacing: 20) {
                         
-                        GameTargetView(target: gameService.targetMicroplastic.microbeads, get: gameService.collectedMicroplastic.microbeads, imageName: microbeads.imageName)
+                        GameTarget(target: gameService.targetMicroplastic.microbeads, get: gameService.collectedMicroplastic.microbeads, imageName: microbeads.imageName)
                         
-                        GameTargetView(target: gameService.targetMicroplastic.microfibers, get: gameService.collectedMicroplastic.microfibers, imageName: microfibers.imageName)
+                        GameTarget(target: gameService.targetMicroplastic.microfibers, get: gameService.collectedMicroplastic.microfibers, imageName: microfibers.imageName)
                         
-                        GameTargetView(target: gameService.targetMicroplastic.microfragments, get: gameService.collectedMicroplastic.microfragments, imageName: microfragments.imageName)
+                        GameTarget(target: gameService.targetMicroplastic.microfragments, get: gameService.collectedMicroplastic.microfragments, imageName: microfragments.imageName)
                     }
                     
                     Spacer()
@@ -95,9 +95,6 @@ struct GameView: View {
         }
         .monospaced()
         .navigationBarBackButtonHidden()
-        .sheet(isPresented: $showSheet) {
-            GoalView(getFromSheet: true)
-        }
     }
 }
 

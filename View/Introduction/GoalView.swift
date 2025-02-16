@@ -26,50 +26,61 @@ struct GoalView: View {
                         .italic()
                 }
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color("ButtonColor"))
-                    
-                    Text("\(microbeads.introduction)")
+                VStack(alignment: .leading) {
+                    Text("Your Goal: ")
                         .font(.title2)
+                        .bold()
+                    
+                    Text(goalText)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color("ButtonColor"))
+                        )
+                        .frame(maxWidth: 500)
                 }
-                .frame(width: 600, height: 150)
-                
-                HStack(spacing: 30) {
-                    VStack(spacing: 15) {
-                        Image(microfragments.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 80)
-                        
-                        Text("5000")
-                            .font(.title2)
-                    }
+                VStack(alignment: .center) {
+                    Text("Collection Target:")
+                        .font(.title2)
+                        .bold()
                     
-                    VStack(spacing: 15) {
-                        Image(microfibers.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 80)
+                    HStack(spacing: 30) {
+                        VStack(spacing: 15) {
+                            Image(microfragments.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 60)
+                            
+                            Text("5000")
+                                .font(.title3)
+                        }
                         
-                        Text("5000")
-                            .font(.title2)
-                    }
-                    
-                    VStack(spacing: 15) {
-                        Image(microbeads.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 80)
+                        VStack(spacing: 15) {
+                            Image(microfibers.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 60)
+                            
+                            Text("5000")
+                                .font(.title3)
+                        }
                         
-                        Text("5000")
-                            .font(.title2)
+                        VStack(spacing: 15) {
+                            Image(microbeads.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 60)
+                            
+                            Text("5000")
+                                .font(.title3)
+                        }
                     }
                 }
             }
             .padding([.horizontal], 30)
             
             MuseumView(firstIntro: true)
+                
             
             if !getFromSheet {
                 HStack {
@@ -97,6 +108,6 @@ struct GoalView: View {
 }
 
 #Preview {
-    GoalView(getFromSheet: false)
+    GoalView(getFromSheet: true)
         .environmentObject(GameService())
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GameTargetView: View {
+struct GameTarget: View {
     
     let target: Int
     let get: Int
@@ -28,5 +28,5 @@ struct GameTargetView: View {
 }
 
 #Preview {
-    GameTargetView(target: 2000, get: 2000, imageName: microbeads.imageName)
+    GameTarget(target: 2000, get: 2000, imageName: microbeads.imageName)
 }

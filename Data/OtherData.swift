@@ -7,7 +7,7 @@
 
 let appTitle = "Microplastic Tracker"
 
-let goalText: String = ""
+let goalText: String = "Collect microplastics by chatching different marine organisms.\nEach organism contains different amounts of microplastics!"
 
 let congratulationsText: String = ""
 

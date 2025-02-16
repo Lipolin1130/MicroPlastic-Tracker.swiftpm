@@ -23,9 +23,13 @@ struct RewardSingleView: View {
                             .padding()
                             .scaledToFit()
                     }
+                
                 if biology.enabled && biology.count > 0 {
                     Text("\(biology.count)")
+                        .bold()
                         .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .shadow(color: .black.opacity(0.8), radius: 5, x: 2, y: 2)
                 }
             }
             

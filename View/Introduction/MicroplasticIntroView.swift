@@ -9,9 +9,8 @@ import SwiftUI
 
 struct MicroplasticIntroView: View {
     var body: some View {
-        ZStack {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack(alignment: .top, spacing: 50) {
+            VStack(alignment: .leading, spacing: 25) {
+                HStack(alignment: .top, spacing: 100) {
                     VStack(spacing: 10) {
                         Image(microfragments.imageName)
                             .resizable()
@@ -22,27 +21,24 @@ struct MicroplasticIntroView: View {
                             .font(.title2)
                             .italic()
                     }
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color("ButtonColor"))
-                        
-                        Text(microfragments.introduction)
-                            .font(.title2)
-                    }
+                    Text(microfragments.introduction)
+                        .font(.title2)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color("ButtonColor"))
+                        )
                 }
-                .padding()
                 .frame(maxWidth: .infinity)
                 
-                
-                HStack(alignment: .top, spacing: 50) {
-                    
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color("ButtonColor"))
-                        
-                        Text(microbeads.introduction)
-                            .font(.title2)
-                    }
+                HStack(alignment: .top, spacing: 100) {
+                    Text(microbeads.introduction)
+                        .font(.title2)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color("ButtonColor"))
+                        )
                     
                     VStack(spacing: 10) {
                         Image(microbeads.imageName)
@@ -54,10 +50,10 @@ struct MicroplasticIntroView: View {
                             .italic()
                     }
                 }
-                .padding()
+
                 .frame(maxWidth: .infinity)
                 
-                HStack(alignment: .top, spacing: 50) {
+                HStack(alignment: .top, spacing: 100) {
                     VStack(spacing: 10) {
                         Image(microfibers.imageName)
                             .resizable()
@@ -68,21 +64,17 @@ struct MicroplasticIntroView: View {
                             .font(.title2)
                             .italic()
                     }
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color("ButtonColor"))
-                        
-                        Text(microfibers.introduction)
-                            .font(.title2)
-                    }
+                    
+                    Text(microfibers.introduction)
+                        .font(.title2)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color("ButtonColor"))
+                        )
                 }
-                .padding()
                 .frame(maxWidth: .infinity)
-            }
-            .padding([.horizontal, .bottom], 60)
-            
-            VStack {
-                Spacer()
+                
                 HStack {
                     Spacer()
                     NavigationLink {
@@ -99,10 +91,11 @@ struct MicroplasticIntroView: View {
                     }
                 }
             }
-        }
-        .monospaced()
-        .padding(20)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(60)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .monospaced()
+            .padding(20)
+            .navigationBarBackButtonHidden()
     }
 }
 

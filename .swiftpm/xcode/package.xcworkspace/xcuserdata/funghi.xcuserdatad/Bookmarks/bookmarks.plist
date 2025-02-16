@@ -12,53 +12,6 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>33</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>32</string>
-					<key>Timestamp</key>
-					<string>761328289.306126</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>View/Introduction/GoalView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                    Text("\(microbeads.introduction)")
-</string>
-				<key>leading</key>
-				<string>                        .fill(Color("ButtonColor"))
-                    
-</string>
-				<key>trailing</key>
-				<string>                        .font(.title2)
-                }
-                .frame(width: 600, height: 150)
-</string>
-			</dict>
-			<key>title</key>
-			<string>change text to goal</string>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
 					<string>24</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
@@ -153,13 +106,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>27</string>
+					<string>28</string>
 					<key>StartingColumnNumber</key>
-					<string>44</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>26</string>
+					<string>27</string>
 					<key>Timestamp</key>
-					<string>761371672.923427</string>
+					<string>761389159.430588</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -175,16 +128,17 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>                    Text("\(biology.count)")
+                        .bold()
 </string>
 				<key>leading</key>
-				<string>                    }
+				<string>                
                 if biology.enabled &amp;&amp; biology.count &gt; 0 {
-                    Text("\(biology.count)")</string>
+</string>
 				<key>trailing</key>
 				<string>                        .font(.largeTitle)
-                }
-            }
+                        .foregroundStyle(.white)
+                        .shadow(color: .black.opacity(0.8), radius: 5, x: 2, y: 2)
 </string>
 			</dict>
 			<key>title</key>

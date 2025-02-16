@@ -10,17 +10,17 @@
 let microbeads = MicroplasticInfo(
     name: .microbeads,
     imageName: "Microbeads",
-    introduction: "Microbeads are tiny plastic spheres (less than 1mm) commonly found in personal care products like face scrubs and toothpaste. Due to their small size, they easily enter waterways and are ingested by plankton, starting the microplastic accumulation in the food chain."
+    introduction: "We are tiny but cause big trouble!”\nFish eat us, people eat the fish, and in the end… you eat us too!\nThis is called ‘biomagnification’—you’re absorbing more microplastics than you think!"
 )
 
 let microfibers = MicroplasticInfo(
     name: .microfibers,
     imageName: "Microfibers",
-    introduction: "Microfibers are thin plastic strands released from synthetic textiles (like polyester and nylon) during washing. These fibers are highly abundant in marine environments and are easily absorbed by filter feeders like shellfish, passing through the food chain."
+    introduction: "We never really disappear!”\nEven when plastic breaks into tiny pieces, it’s still plastic—just harder to remove.\nNow, microplastics have been found in the air, drinking water, and even human breast milk… "
 )
 
 let microfragments = MicroplasticInfo(
     name: .microfragments,
     imageName: "MicroFragments",
-    introduction: "Microfragments are irregular plastic particles formed from the breakdown of larger plastic debris like bottles, bags, and fishing gear. They are commonly found in the ocean and are ingested by marine mammals, birds, and large fish."
+    introduction: "Hey, we are microplastics!”\nYou may not notice us, but we’re everywhere! \nFrom face washes, toothpaste, and clothes to the ocean, fish, and even inside your body!"
 )
