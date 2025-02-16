@@ -27,7 +27,7 @@ struct BiologyView: View {
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 30)
                     .fill(Color.gray.opacity(0.3))
-                    .frame(width: 500, height: 225)
+                    .frame(width: 550, height: 225)
                     .overlay {
                         VStack(alignment: .leading, spacing: 10) {
                             HStack(spacing: 0) {
@@ -53,7 +53,7 @@ struct BiologyView: View {
                             
                             LazyVStack(alignment: .leading, spacing: 0) {
                                 let textArray = Array(enabled ? biology.introduction : Utilities.randomString(changeLetter: biology.introduction))
-                                let maxCharsPerLine = 37
+                                let maxCharsPerLine = 45
                                 let totalLines = (textArray.count + maxCharsPerLine - 1) / maxCharsPerLine
                                 
                                 ForEach(0..<totalLines, id: \.self) { lineIndex in
@@ -87,7 +87,7 @@ struct BiologyView: View {
                             }
                         }
                         .padding(.vertical, 10)
-                        .frame(width: 380, height: 225)
+                        .frame(width: 400, height: 225)
                         .offset(x: 55)
                     }
                     .offset(x: 120)
@@ -161,7 +161,7 @@ struct BiologyView: View {
         }
         .monospaced()
         .padding([.top, .leading, .bottom], 30)
-        .frame(width: 650, height: 425, alignment: .topLeading)
+        .frame(width: 700, height: 425, alignment: .topLeading)
         .sheet(isPresented: $showSheet) {
             BiologyDetailView(biology: biology, showSheet: $showSheet)
         }

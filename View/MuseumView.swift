@@ -16,7 +16,7 @@ struct MuseumView: View {
     var body: some View {
         ZStack {
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .center, spacing: 180) {
+                HStack(alignment: .center, spacing: 120) {
                     ForEach(biology, id: \.self) {bio in
                         if let index = gameService.collectedBiology.firstIndex(where: {
                             $0.type == bio.type
@@ -87,4 +87,3 @@ struct MuseumView: View {
     MuseumView(firstIntro: false)
         .environmentObject(GameService())
 }
-

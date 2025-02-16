@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RewardView: View {
     @EnvironmentObject var gameService: GameService
+    
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
             Text("Congratulations!")
@@ -64,6 +65,7 @@ struct RewardView: View {
                         .frame(width: 120)
                         .background(Color("ButtonColor"))
                         .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 10)
                 }
                    
             }
@@ -72,6 +74,7 @@ struct RewardView: View {
         .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .monospaced()
+        .navigationBarBackButtonHidden()
     }
 }
 

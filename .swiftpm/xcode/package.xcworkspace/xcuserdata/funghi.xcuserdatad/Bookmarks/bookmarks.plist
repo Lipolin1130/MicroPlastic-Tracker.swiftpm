@@ -12,194 +12,6 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>30</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>29</string>
-					<key>Timestamp</key>
-					<string>761248060.787182</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>View/StartView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                        //TODO: next page
-</string>
-				<key>leading</key>
-				<string>                    
-                    Button {
-</string>
-				<key>trailing</key>
-				<string>                    } label: {
-                        Text("Start")
-                            .foregroundStyle(Color("textColor"))
-</string>
-			</dict>
-			<key>title</key>
-			<string>add animation to jump page</string>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>44</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>43</string>
-					<key>Timestamp</key>
-					<string>761298974.6013891</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>View/Introduction/MuseumIntroView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                    //TODO: next page
-</string>
-				<key>leading</key>
-				<string>                
-                Button {
-</string>
-				<key>trailing</key>
-				<string>                } label: {
-                    Text("Next")
-                        .foregroundStyle(Color("textColor"))
-</string>
-			</dict>
-			<key>title</key>
-			<string>Next View</string>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>10</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>9</string>
-					<key>Timestamp</key>
-					<string>761303615.750351</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>Data/Other.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>let goal: String = ""
-</string>
-				<key>leading</key>
-				<string>let appTitle = "Microplastic Tracker"
-
-</string>
-				<key>trailing</key>
-				<string>
-let biology: [BiologyInfo] = [
-    salp, northernPrawn, anchovy,
-</string>
-			</dict>
-			<key>title</key>
-			<string>Add goal description in GoalView </string>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
-					<string>59</string>
-					<key>StartingColumnNumber</key>
-					<string>0</string>
-					<key>StartingLineNumber</key>
-					<string>58</string>
-					<key>Timestamp</key>
-					<string>761322720.632375</string>
-				</dict>
-				<key>rebasable-url</key>
-				<dict>
-					<key>base</key>
-					<string>workspace</string>
-					<key>payload</key>
-					<dict>
-						<key>relative-path</key>
-						<string>View/Introduction/StartView.swift</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>text-context</key>
-			<dict>
-				<key>focused</key>
-				<string>                            Text("Start")//TODO: START animation
-</string>
-				<key>leading</key>
-				<string>                            }
-                        } label: {
-</string>
-				<key>trailing</key>
-				<string>                                .foregroundStyle(Color("textColor"))
-                                .font(.largeTitle)
-                                .padding(20)
-</string>
-			</dict>
-			<key>title</key>
-			<string>start animation</string>
-			<key>type</key>
-			<string>bookmark</string>
-		</dict>
-		<dict>
-			<key>destination</key>
-			<dict>
-				<key>location-parameters</key>
-				<dict>
-					<key>EndingColumnNumber</key>
-					<string>0</string>
-					<key>EndingLineNumber</key>
 					<string>33</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
@@ -294,13 +106,13 @@ let biology: [BiologyInfo] = [
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>48</string>
+					<string>49</string>
 					<key>StartingColumnNumber</key>
-					<string>73</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>47</string>
+					<string>48</string>
 					<key>Timestamp</key>
-					<string>761309093.8347239</string>
+					<string>761330276.862453</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -316,12 +128,12 @@ let biology: [BiologyInfo] = [
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>                    Text("\(gameService.collectedMicroplastic.addAll())")
 </string>
 				<key>leading</key>
 				<string>                        .fill(Color("ButtonColor"))
       
-                    Text("\(gameService.collectedMicroplastic.addAll())")</string>
+</string>
 				<key>trailing</key>
 				<string>                        .font(.title2)
                         .bold()
@@ -330,6 +142,53 @@ let biology: [BiologyInfo] = [
 			</dict>
 			<key>title</key>
 			<string>Bold, itlatic the account</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>27</string>
+					<key>StartingColumnNumber</key>
+					<string>44</string>
+					<key>StartingLineNumber</key>
+					<string>26</string>
+					<key>Timestamp</key>
+					<string>761371672.923427</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>View/Game/RewardSingleView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>
+</string>
+				<key>leading</key>
+				<string>                    }
+                if biology.enabled &amp;&amp; biology.count &gt; 0 {
+                    Text("\(biology.count)")</string>
+				<key>trailing</key>
+				<string>                        .font(.largeTitle)
+                }
+            }
+</string>
+			</dict>
+			<key>title</key>
+			<string>Add popup style</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

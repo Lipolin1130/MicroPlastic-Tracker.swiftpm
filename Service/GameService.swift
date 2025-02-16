@@ -21,6 +21,12 @@ class GameService: ObservableObject {
     
     var targetMicroplastic: Microplastic // Mission
     
+    var completed: Bool {
+        targetMicroplastic.microbeads <= collectedMicroplastic.microbeads &&
+        targetMicroplastic.microfibers <= collectedMicroplastic.microfibers &&
+        targetMicroplastic.microfragments <= collectedMicroplastic.microfragments
+    }
+    
     init() {
         collectedBiology = [
             CollectedBiology(type: .salp, enabled: true),

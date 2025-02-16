@@ -95,6 +95,7 @@ struct MicroplasticIntroView: View {
                             .frame(width: 120)
                             .background(Color("ButtonColor"))
                             .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .shadow(radius: 10)
                     }
                 }
             }

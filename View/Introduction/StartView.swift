@@ -29,17 +29,7 @@ struct StartView: View {
                     .animation(.easeInOut(duration: 2), value: imageOppacity)
                 
                 if startButton {
-                    VStack {
-                        NavigationLink {
-                            MicroplasticIntroView()
-                        } label: {
-                            Image("microplasticFishEat")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 300)
-                                .padding(.bottom, 150)
-                        }
-                    }
+                    GuideView()
                 } else {
                     VStack {
                         Spacer()
@@ -56,13 +46,14 @@ struct StartView: View {
                                 startButton = true
                             }
                         } label: {
-                            Text("Start")//TODO: START animation
+                            Text("Start")
                                 .foregroundStyle(Color("textColor"))
                                 .font(.largeTitle)
                                 .padding(20)
                                 .background(Color("ButtonColor"))
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                                 .frame(width: 200)
+                                .shadow(radius: 10)
                                 .padding(.top, 150)
                         }
                         Spacer()

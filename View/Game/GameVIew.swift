@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct GameView: View {
+    
     @EnvironmentObject var gameService: GameService
     @State private var playingAreaSize: CGSize = .zero
     @State private var showSheet = false
+    
     var body: some View {
         ZStack {
             Image("background")
@@ -67,7 +69,31 @@ struct GameView: View {
                 }
             }
             .padding(30)
+            
+            if gameService.completed {
+                HStack {
+                    VStack {
+                        Spacer()
+                        
+                        NavigationLink {
+                            RewardView()
+                        } label: {
+                            Text("Next")
+                                .foregroundStyle(Color("textColor"))
+                                .font(.title2)
+                                .bold()
+                                .padding(18)
+                                .frame(width: 120)
+                                .background(Color("ButtonColor"))
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .shadow(radius: 10)
+                                .padding(.bottom, 25)
+                        }
+                    }
+                }
+            }
         }
+        .monospaced()
         .navigationBarBackButtonHidden()
         .sheet(isPresented: $showSheet) {
             GoalView(getFromSheet: true)
