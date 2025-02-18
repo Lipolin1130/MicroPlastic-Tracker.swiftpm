@@ -26,7 +26,7 @@ struct GameBiologyView: View {
         Image(biology.type.imageName())
             .resizable()
             .scaledToFit()
-            .frame(width: 100, height: 100)
+            .frame(width: biology.size, height: biology.size)
             .position(position)
             .onTapGesture {
                 stopMoving()
@@ -88,7 +88,7 @@ struct GameBiologyView: View {
 #Preview {
     GameBiologyView(
         biology: Biology(
-            type: .anchovy,
+            type: .human,
             position: CGPoint(x: CGFloat.random(in: 50...500), y: CGFloat.random(in: 50...500))
         ),
         areaSize: .constant(CGSize(width: 1150, height: 606)),

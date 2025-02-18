@@ -5,8 +5,6 @@
 //  Created by 李柏霖 on 2025/2/13.
 //
 
-// TODO: change the description to first person
-
 let microbeads = MicroplasticInfo(
     name: .microbeads,
     imageName: "Microbeads",

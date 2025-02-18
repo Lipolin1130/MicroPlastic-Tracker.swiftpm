@@ -10,7 +10,7 @@ import Foundation
 struct Biology: Hashable, Equatable, Identifiable {
     let id = UUID()
     var type: BiologyType
-    var microplastic: Microplastic {// generate random microplastic by type
+    var microplastic: Microplastic {
         switch type {
         case .salp: return salp.microplastic
         case .shrimp: return northernPrawn.microplastic
@@ -23,12 +23,12 @@ struct Biology: Hashable, Equatable, Identifiable {
     
     var size: Double {
         switch type {
-        case .salp: return Double.random(in: 10...15)
-        case .shrimp: return Double .random(in: 10...30)
-        case .anchovy: return Double.random(in: 10...50)
-        case .skipjackTuna: return Double.random(in: 50...200)
-        case .tuna: return Double.random(in: 50...200)
-        case .human: return Double.random(in: 100...200)
+        case .salp: return 75
+        case .shrimp: return 100
+        case .anchovy: return 125
+        case .skipjackTuna: return 150
+        case .tuna: return 200
+        case .human: return 250
         }
     }
     var position: CGPoint
