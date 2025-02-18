@@ -46,16 +46,14 @@ struct MuseumView: View {
             
             if !firstIntro {
                 VStack {
-                    HStack(alignment: .bottom, spacing: 30) {
+                    HStack(alignment: .center, spacing: 30) {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Organisms Museum")
                                 .font(.system(size: 45))
                             
-                            Text("Here, you can unlock new organisms and learn about their details.")
+                            Text("Here, you can unlock new organisms and learn about different organisms.")
                                 .foregroundStyle(.gray)
                         }
-                        
-                        Spacer()
                         
                         Image(microbeads.imageName)
                             .resizable()
@@ -92,6 +90,6 @@ struct MuseumView: View {
 }
 
 #Preview {
-    MuseumView(firstIntro: true)
+    MuseumView(firstIntro: false)
         .environmentObject(GameService())
 }

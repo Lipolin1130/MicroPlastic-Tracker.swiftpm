@@ -27,33 +27,28 @@ struct GoalView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text("Your Goal: ")
-                        .font(.title2)
-                        .bold()
-                    VStack(alignment: .leading) {
-                        Text("Collect microplastics by catching different marine organisms. ") +
-                        Text("Each organism contains different amounts of microplastics!")
-                        HStack(alignment: .bottom) {
-                            Text("You can unlock new organisms in the")
-                                .bold()
-                            
-                            Image(systemName: "books.vertical")
-                                .font(.title2)
-                        }
-                        Text("at the top right corner.")
+                    Text("Collect microplastics by catching different marine organisms. ") +
+                    Text("Each organism contains different amounts of microplastics!")
+                    HStack(alignment: .bottom) {
+                        Text("You can unlock new organisms in the")
                             .bold()
+                        
+                        Image(systemName: "books.vertical")
+                            .font(.title2)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color("ButtonColor"))
-                    )
+                    Text("at the top right corner.")
+                        .bold()
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color("ButtonColor"))
+                )
                 .frame(alignment: .leading)
                 
                 VStack(alignment: .leading) {
-                    Text("Your Target:")
+                    Text("Your Goal:")
                         .font(.title2)
                         .bold()
                     

@@ -106,6 +106,7 @@ class GameService: ObservableObject {
             microfragments: 5000
         )
         
+        spawnedBiology = []
         spawnBiology(count: maxBiologyCount)
     }
 }

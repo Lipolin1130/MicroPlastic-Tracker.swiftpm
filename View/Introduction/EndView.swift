@@ -40,9 +40,9 @@ struct EndView: View {
                         .shadow(radius: 10)
                         .padding(.top, 150)
                 }
-                .onTapGesture {
+                .simultaneousGesture(TapGesture().onEnded{
                     gameService.resetGame()
-                }
+                })
                 
                 Spacer()
             }
