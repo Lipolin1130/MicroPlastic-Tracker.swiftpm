@@ -19,7 +19,7 @@ struct BiologyDetailView: View {
                     Image(biology.type.imageName())
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 400)
+                        .frame(height: 350)
                     
                     Text(biology.type.rawValue)
                         .font(.largeTitle)

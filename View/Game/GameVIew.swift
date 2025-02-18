@@ -18,6 +18,7 @@ struct GameView: View {
                         GoalView(getFromSheet: true)
                     } label: {
                         Image(systemName: "questionmark.circle")
+                            .foregroundStyle(.white.opacity(0.8))
                     }
                     
                     Spacer()
@@ -30,6 +31,7 @@ struct GameView: View {
                         
                         GameTarget(target: gameService.targetMicroplastic.microfragments, get: gameService.collectedMicroplastic.microfragments, imageName: microfragments.imageName)
                     }
+                    .opacity(0.8)
                     
                     Spacer()
                     
@@ -37,8 +39,8 @@ struct GameView: View {
                         MuseumView(firstIntro: false)
                     } label: {
                         Image(systemName: "books.vertical")
+                            .opacity(0.8)
                     }
-                    
                 }
                 .font(.system(size: 60))
                 .monospaced()
@@ -93,11 +95,11 @@ struct GameView: View {
             }
             
             if gameService.newBiologyUnlocked {
-                Text("New Organism Can Unlocked!")
+                Text("New Organism Available for Unlock!")
                     .font(.title3)
                     .bold()
                     .padding()
-                    .background(Color.black.opacity(0.5))
+                    .background(Color.black.opacity(0.8))
                     .foregroundStyle(.white)
                     .cornerRadius(10)
                     .transition(.opacity)
