@@ -34,7 +34,8 @@ struct StartView: View {
                     VStack {
                         Spacer()
                         Text(appTitle)
-                            .font(.largeTitle)
+                            .foregroundStyle(Color("textColor"))
+                            .font(.system(size: 50))
                             .padding(.top, 250)
                         
                         Spacer()

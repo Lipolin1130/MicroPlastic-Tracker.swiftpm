@@ -84,6 +84,7 @@ struct BiologyView: View {
                                     Text("See more...")
                                         .underline()
                                 }
+                                .foregroundStyle(enabled ? .orange : .gray)
                             }
                         }
                         .padding(.vertical, 10)

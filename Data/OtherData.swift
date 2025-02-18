@@ -7,9 +7,9 @@
 
 let appTitle = "Microplastic Tracker"
 
-let goalText: String = "Collect microplastics by chatching different marine organisms.\nEach organism contains different amounts of microplastics!"
+//let goalText: String = "Collect microplastics by chatching different marine organisms.\nEach organism contains different amounts of microplastics!"
 
-let congratulationsText: String = ""
+let congratulationsText: String = "Total Microplastics Colleted: µg"
 
 let biology: [BiologyInfo] = [
     salp, northernPrawn, anchovy,

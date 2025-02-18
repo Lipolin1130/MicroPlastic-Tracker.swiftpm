@@ -63,7 +63,6 @@ struct GameView: View {
                     .onAppear {
                         DispatchQueue.main.async {
                             playingAreaSize = newSize
-//                            print(playingAreaSize.width, playingAreaSize.height)
                         }
                     }
                 }

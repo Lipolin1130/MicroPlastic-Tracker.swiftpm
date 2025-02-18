@@ -9,12 +9,8 @@ import Foundation
 
 class GameService: ObservableObject {
     
-    @Published var collectedBiology: [CollectedBiology] = []
-    @Published var collectedMicroplastic: Microplastic = Microplastic(
-        microbeads: 0,
-        microfibers: 0,
-        microfragments: 0
-    )
+    @Published var collectedBiology: [CollectedBiology]
+    @Published var collectedMicroplastic: Microplastic
     @Published var spawnedBiology: [Biology] = []
     
     let maxBiologyCount = 7
@@ -36,6 +32,12 @@ class GameService: ObservableObject {
             CollectedBiology(type: .tuna, enabled: false),
             CollectedBiology(type: .human, enabled: false)
         ]
+        
+        collectedMicroplastic = Microplastic(
+            microbeads: 0,
+            microfibers: 0,
+            microfragments: 0
+        )
         
         targetMicroplastic = Microplastic(
             microbeads: 5000,
@@ -80,5 +82,30 @@ class GameService: ObservableObject {
                 y: CGFloat.random(in: 50...500)
             )
         )
+    }
+    
+    func resetGame() {
+        collectedBiology = [
+            CollectedBiology(type: .salp, enabled: true),
+            CollectedBiology(type: .shrimp, enabled: true),
+            CollectedBiology(type: .anchovy, enabled: false),
+            CollectedBiology(type: .skipjackTuna, enabled: false),
+            CollectedBiology(type: .tuna, enabled: false),
+            CollectedBiology(type: .human, enabled: false)
+        ]
+        
+        collectedMicroplastic = Microplastic(
+            microbeads: 0,
+            microfibers: 0,
+            microfragments: 0
+        )
+        
+        targetMicroplastic = Microplastic(
+            microbeads: 5000,
+            microfibers: 5000,
+            microfragments: 5000
+        )
+        
+        spawnBiology(count: maxBiologyCount)
     }
 }

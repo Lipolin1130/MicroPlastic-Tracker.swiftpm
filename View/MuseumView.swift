@@ -15,36 +15,45 @@ struct MuseumView: View {
     
     var body: some View {
         ZStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .center, spacing: 120) {
-                    ForEach(biology, id: \.self) {bio in
-                        if let index = gameService.collectedBiology.firstIndex(where: {
-                            $0.type == bio.type
-                        }) {
-                            BiologyView(
-                                enabled: !firstIntro ? $gameService.collectedBiology[index].enabled: .constant(false),
-                                microplastic: $gameService.collectedMicroplastic,
-                                biology: bio,
-                                firstIntro: firstIntro
-                            )
-                            .padding(.top, firstIntro ? 10 : 80)
-                            
-                            if index != gameService.collectedBiology.count - 1 {
-                                Image(systemName: "arrowshape.right.fill")
-                                    .font(.system(size: 80))
+            VStack(alignment: .leading) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .center, spacing: 120) {
+                        ForEach(biology, id: \.self) {bio in
+                            if let index = gameService.collectedBiology.firstIndex(where: {
+                                $0.type == bio.type
+                            }) {
+                                BiologyView(
+                                    enabled: !firstIntro ? $gameService.collectedBiology[index].enabled: .constant(false),
+                                    microplastic: $gameService.collectedMicroplastic,
+                                    biology: bio,
+                                    firstIntro: firstIntro
+                                )
+                                .padding(.top, firstIntro ? 10 : 80)
+                                
+                                if index != gameService.collectedBiology.count - 1 {
+                                    Image(systemName: "arrowshape.right.fill")
+                                        .font(.system(size: 80))
+                                }
                             }
                         }
+                        
+                        Spacer()
+                            .frame(width: 50)
                     }
-                    
-                    Spacer()
-                        .frame(width: 50)
+                    .padding(.horizontal, 50)
                 }
-                .padding(.horizontal, 50)
             }
             
             if !firstIntro {
                 VStack {
                     HStack(alignment: .bottom, spacing: 30) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Organisms Museum")
+                                .font(.system(size: 45))
+                            
+                            Text("Here, you can unlock new organisms and learn about their details.")
+                                .foregroundStyle(.gray)
+                        }
                         
                         Spacer()
                         
@@ -76,7 +85,6 @@ struct MuseumView: View {
                     .padding(.horizontal, 30)
                     
                     Spacer()
-                    
                 }
             }
         }
@@ -84,6 +92,6 @@ struct MuseumView: View {
 }
 
 #Preview {
-    MuseumView(firstIntro: false)
+    MuseumView(firstIntro: true)
         .environmentObject(GameService())
 }

@@ -30,17 +30,30 @@ struct GoalView: View {
                     Text("Your Goal: ")
                         .font(.title2)
                         .bold()
-                    
-                    Text(goalText)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color("ButtonColor"))
-                        )
-                        .frame(maxWidth: 500)
+                    VStack(alignment: .leading) {
+                        Text("Collect microplastics by catching different marine organisms. ") +
+                        Text("Each organism contains different amounts of microplastics!")
+                        HStack(alignment: .bottom) {
+                            Text("You can unlock new organisms in the")
+                                .bold()
+                            
+                            Image(systemName: "books.vertical")
+                                .font(.title2)
+                        }
+                        Text("at the top right corner.")
+                            .bold()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color("ButtonColor"))
+                    )
                 }
-                VStack(alignment: .center) {
-                    Text("Collection Target:")
+                .frame(alignment: .leading)
+                
+                VStack(alignment: .leading) {
+                    Text("Your Target:")
                         .font(.title2)
                         .bold()
                     
@@ -49,7 +62,7 @@ struct GoalView: View {
                             Image(microfragments.imageName)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(height: 60)
+                                .frame(height: 85)
                             
                             Text("5000")
                                 .font(.title3)
@@ -59,7 +72,7 @@ struct GoalView: View {
                             Image(microfibers.imageName)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(height: 60)
+                                .frame(height: 85)
                             
                             Text("5000")
                                 .font(.title3)
@@ -69,7 +82,7 @@ struct GoalView: View {
                             Image(microbeads.imageName)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(height: 60)
+                                .frame(height: 85)
                             
                             Text("5000")
                                 .font(.title3)
@@ -80,21 +93,32 @@ struct GoalView: View {
             .padding([.horizontal], 30)
             
             MuseumView(firstIntro: true)
-                
+            
             
             if !getFromSheet {
                 HStack {
+                    
+                    VStack(alignment: .leading) {
+                        Text("Collect enough microplastics to unlock new organisms!")
+                        Text("Different organisms contain different amounts of microplastics.")
+                    }
+                    .font(.callout)
+                    .monospaced()
+                    .padding(.leading, 50)
+                    
+                    
                     Spacer()
                     
                     NavigationLink {
                         GameView()
                     } label: {
                         Text("Next")
-                            .foregroundStyle(Color("textColor"))
+                            .foregroundStyle(Color("ButtonColor"))
+                            .bold()
                             .font(.title2)
                             .padding(18)
                             .frame(width: 120)
-                            .background(Color("ButtonColor"))
+                            .background(.indigo)
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10)
                     }
@@ -108,6 +132,6 @@ struct GoalView: View {
 }
 
 #Preview {
-    GoalView(getFromSheet: true)
+    GoalView(getFromSheet: false)
         .environmentObject(GameService())
 }

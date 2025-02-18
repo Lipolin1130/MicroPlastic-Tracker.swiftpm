@@ -15,6 +15,10 @@ struct GuideView: View {
     var body: some View {
         VStack {
             ZStack {
+                RandomImage(imageName: "bottle", count: 5)
+                
+                RandomImage(imageName: "plastic bag", count: 5)
+                
                 GeometryReader { geometry in
                     Image("microplasticFishEat")
                         .resizable()
@@ -74,7 +78,7 @@ struct GuideView: View {
     
     private func startTimer() {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 8, repeats: false) {_ in
+        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) {_ in
             DispatchQueue.main.async {
                 withAnimation {
                     showNotification = true
