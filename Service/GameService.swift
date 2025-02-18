@@ -75,10 +75,7 @@ class GameService: ObservableObject {
             
             if let index = self.spawnedBiology.firstIndex(where: { $0.id == biology.id }) {
                 let newBiology = self.generateBiology()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    // generate new biology
-                    self.spawnedBiology[index] = newBiology
-                }
+                self.spawnedBiology[index] = newBiology
             }
         }
     }

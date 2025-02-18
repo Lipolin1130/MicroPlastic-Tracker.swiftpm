@@ -33,9 +33,9 @@ struct GameBiologyView: View {
                 onTap()
             }
             .onAppear {
-                if areaSize.width > 0 && areaSize.height > 0 {
+                startMoving()
+                if position == .zero {
                     updatePosition()
-                    startMoving()
                 }
             }
             .onDisappear {
@@ -60,22 +60,25 @@ struct GameBiologyView: View {
         )
         
         position.y = min(position.y, areaSize.height - halfHeight)
-        
-//        print("Updated Position - x:", position.x, "y:", position.y, "areaSize.height:", areaSize.height)
     }
     
     private func startMoving() {
-        Timer.scheduledTimer(withTimeInterval: Double.random(in: 2...4), repeats: true) { _ in
-            DispatchQueue.main.async {
-                withAnimation(.easeInOut(duration: 2.0)) {
-                    position = CGPoint(
-                        x: CGFloat.random(in: 50...(areaSize.width - 100)),
-                        y: CGFloat.random(in: 50...(areaSize.height - 100))
-                    )
-                    
-//                    print(position.x, position.y)
-                }
+        moveBiology()
+        movementTimer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 2...4), repeats: true) {_ in
+            
+            Task {@MainActor in
+                self.moveBiology()
             }
+        }
+    }
+    
+    @MainActor
+    private func moveBiology() {
+        withAnimation(.easeInOut(duration: 2.0)) {
+            position = CGPoint(
+                x: CGFloat.random(in: 50...(areaSize.width - 100)),
+                y: CGFloat.random(in: 50...(areaSize.height - 100))
+            )
         }
     }
     
