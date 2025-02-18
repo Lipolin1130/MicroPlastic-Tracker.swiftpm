@@ -13,7 +13,7 @@ struct GameView: View {
                 .ignoresSafeArea()
             
             VStack {
-                HStack {
+                HStack(alignment: .center) {
                     NavigationLink {
                         GoalView(getFromSheet: true)
                     } label: {
@@ -90,6 +90,19 @@ struct GameView: View {
                         }
                     }
                 }
+            }
+            
+            if gameService.newBiologyUnlocked {
+                Text("New Organism Can Unlocked!")
+                    .font(.title3)
+                    .bold()
+                    .padding()
+                    .background(Color.black.opacity(0.5))
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .transition(.opacity)
+                    .animation(.easeInOut, value: gameService.newBiologyUnlocked)
+                    .padding(.bottom, 450)
             }
         }
         .monospaced()

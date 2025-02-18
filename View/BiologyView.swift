@@ -10,7 +10,6 @@ import SwiftUI
 struct BiologyView: View {
     @EnvironmentObject var gameService: GameService
     @Binding var enabled: Bool
-    @Binding var microplastic: Microplastic
     @State var showSheet = false
     @State private var timer: Timer?
     @State private var isUnlocking = false
@@ -138,7 +137,7 @@ struct BiologyView: View {
                     .padding(.trailing, 20)
                     
                     Button {
-                        if unLock(need: biology.microplastic, got: microplastic) {
+                        if gameService.unLock(need: biology.microplastic) {
                             withAnimation {
                                 enabled = true
                             }
@@ -167,22 +166,12 @@ struct BiologyView: View {
             BiologyDetailView(biology: biology, showSheet: $showSheet)
         }
         .onAppear {
-            if unLock(need: biology.microplastic, got: microplastic) {
+            if gameService.unLock(need: biology.microplastic) {
                 startUnlockAnimation()
             }
         }
         .onDisappear {
             stopUnlockAnimation()
-        }
-    }
-    
-    func unLock(need: Microplastic, got: Microplastic) -> Bool {
-        if got.microbeads >= need.microbeads &&
-            got.microfibers >= need.microfibers &&
-            got.microfragments >= need.microfragments {
-            return true
-        } else {
-            return false
         }
     }
     
@@ -206,9 +195,6 @@ struct BiologyView: View {
 #Preview {
     BiologyView(
         enabled: .constant(false),
-        microplastic: .constant(
-            Microplastic(microbeads: 0, microfibers: 0, microfragments: 0)
-        ),
         biology: human,
         firstIntro: true
     )

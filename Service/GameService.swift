@@ -23,6 +23,17 @@ class GameService: ObservableObject {
         targetMicroplastic.microfragments <= collectedMicroplastic.microfragments
     }
     
+    var newBiologyUnlocked: Bool {
+        for biology in collectedBiology where !biology.enabled {
+            if let requireMicroplastic = BiologyInfo.requirements[biology.type] {
+                if unLock(need: requireMicroplastic) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
     init() {
         collectedBiology = [
             CollectedBiology(type: .salp, enabled: true),
@@ -82,6 +93,16 @@ class GameService: ObservableObject {
                 y: CGFloat.random(in: 50...500)
             )
         )
+    }
+    
+    func unLock(need: Microplastic) -> Bool {
+        if self.collectedMicroplastic.microbeads >= need.microbeads &&
+            self.collectedMicroplastic.microfibers >= need.microfibers &&
+            self.collectedMicroplastic.microfragments >= need.microfragments {
+            return true
+        } else {
+            return false
+        }
     }
     
     func resetGame() {

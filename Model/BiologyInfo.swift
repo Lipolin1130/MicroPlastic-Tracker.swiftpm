@@ -16,6 +16,15 @@ struct BiologyInfo: Hashable {
     let size: String
     let torphicLevel: torphicLevelType
     let microplastic: Microplastic
+    
+    static let requirements: [BiologyType: Microplastic] = [
+        .salp: Microplastic(microbeads: 3, microfibers: 2, microfragments: 2),
+        .shrimp: Microplastic(microbeads: 10, microfibers: 15, microfragments: 12),
+        .anchovy: Microplastic(microbeads: 50, microfibers: 48, microfragments: 54),
+        .skipjackTuna: Microplastic(microbeads: 258, microfibers: 264, microfragments: 280),
+        .tuna: Microplastic(microbeads: 872, microfibers: 940, microfragments: 900),
+        .human: Microplastic(microbeads: 2000, microfibers: 2000, microfragments: 2000)
+    ]
 }
 
 enum BiologyType: String {

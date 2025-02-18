@@ -16,11 +16,7 @@ let salp = BiologyInfo(
     habitat: "Commonly found at the surface of equatorial, temperate, and cold seas, either singly or in long, stringy colonies.",
     size: "1.0",
     torphicLevel: .primaryProducer,
-    microplastic: Microplastic(
-        microbeads: 3,
-        microfibers: 2,
-        microfragments: 2
-    )
+    microplastic: BiologyInfo.requirements[.salp]!
 )
 
 let northernPrawn = BiologyInfo(
@@ -31,11 +27,7 @@ let northernPrawn = BiologyInfo(
     habitat: "Soft muddy bottoms at depths of 20 to 1,330 meters in cold waters with temperatures ranging from 0 to 8°C.",
     size: "16.5",
     torphicLevel: .primaryConsumer,
-    microplastic: Microplastic(
-        microbeads: 10,
-        microfibers: 15,
-        microfragments: 12
-    )
+    microplastic: BiologyInfo.requirements[.shrimp]!
 )
 
 let anchovy = BiologyInfo(
@@ -46,11 +38,7 @@ let anchovy = BiologyInfo(
     habitat: "Typically inhabit shallow coastal waters, estuaries, and bays with muddy bottoms, capable of adapting to varying salinities and temperatures.",
     size: "10.0",
     torphicLevel: .secondaryConsumer,
-    microplastic: Microplastic(
-        microbeads: 50,
-        microfibers: 48,
-        microfragments: 54
-    )
+    microplastic: BiologyInfo.requirements[.anchovy]!
 )
 
 
@@ -62,11 +50,7 @@ let skipjackTuna = BiologyInfo(
     habitat: "Inhabit tropical and warm-temperate oceans worldwide, often found in large schools in surface waters.",
     size: "100.0",
     torphicLevel: .secondaryConsumer,
-    microplastic: Microplastic(
-        microbeads: 258,
-        microfibers: 264,
-        microfragments: 280
-    )
+    microplastic: BiologyInfo.requirements[.skipjackTuna]!
 )
 
 let atlanticBluefineTuna = BiologyInfo(
@@ -77,11 +61,7 @@ let atlanticBluefineTuna = BiologyInfo(
     habitat: "Inhabit both the western and eastern Atlantic Ocean, as well as the Mediterranean Sea. They are known for long-distance migrations across these regions.",
     size: "460.0",
     torphicLevel: torphicLevelType.tertiaryConsumer,
-    microplastic: Microplastic(
-        microbeads: 872,
-        microfibers: 940,
-        microfragments: 900
-    )
+    microplastic: BiologyInfo.requirements[.tuna]!
 )
 
 
@@ -93,9 +73,5 @@ let human = BiologyInfo(
     habitat: "Humans inhabit diverse environments across the globe, from urban areas to rural regions, adapting to various climates and geographies.",
     size: "170",
     torphicLevel: .topPredator,
-    microplastic: Microplastic(
-        microbeads: 2000,
-        microfibers: 2000,
-        microfragments: 2000
-    )
+    microplastic: BiologyInfo.requirements[.human]!
 )

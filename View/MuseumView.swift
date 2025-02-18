@@ -24,7 +24,6 @@ struct MuseumView: View {
                             }) {
                                 BiologyView(
                                     enabled: !firstIntro ? $gameService.collectedBiology[index].enabled: .constant(false),
-                                    microplastic: $gameService.collectedMicroplastic,
                                     biology: bio,
                                     firstIntro: firstIntro
                                 )
@@ -54,6 +53,9 @@ struct MuseumView: View {
                             Text("Here, you can unlock new organisms and learn about different organisms.")
                                 .foregroundStyle(.gray)
                         }
+                        .frame(width: 450)
+                        
+                        Spacer()
                         
                         Image(microbeads.imageName)
                             .resizable()
@@ -80,7 +82,7 @@ struct MuseumView: View {
                             .font(.largeTitle)
                     }
                     .monospaced()
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 20)
                     
                     Spacer()
                 }
