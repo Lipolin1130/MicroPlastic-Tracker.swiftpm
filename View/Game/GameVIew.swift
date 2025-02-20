@@ -5,6 +5,7 @@ struct GameView: View {
     @EnvironmentObject var gameService: GameService
     @State private var playingAreaSize: CGSize = .zero
     @State private var showSheet = false
+    @State private var blink = false
     
     var body: some View {
         ZStack {
@@ -24,7 +25,6 @@ struct GameView: View {
                     Spacer()
                     
                     HStack(spacing: 20) {
-                        
                         GameTarget(target: gameService.targetMicroplastic.microbeads, get: gameService.collectedMicroplastic.microbeads, imageName: microbeads.imageName)
                         
                         GameTarget(target: gameService.targetMicroplastic.microfibers, get: gameService.collectedMicroplastic.microfibers, imageName: microfibers.imageName)
@@ -40,6 +40,15 @@ struct GameView: View {
                     } label: {
                         Image(systemName: "books.vertical")
                             .foregroundStyle(.white.opacity(0.8))
+                            .scaleEffect(blink ? 1.2 : 1)
+                            .animation(gameService.newBiologyUnlocked ?
+                                .easeInOut(duration: 0.8).repeatForever(autoreverses: true):
+                                .default,
+                                value: blink
+                            )
+                    }
+                    .onChange(of: gameService.newBiologyUnlocked) {newValue in
+                        blink = newValue
                     }
                 }
                 .font(.system(size: 60))

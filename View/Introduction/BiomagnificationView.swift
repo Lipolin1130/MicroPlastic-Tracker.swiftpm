@@ -24,7 +24,7 @@ struct BiomagnificationView: View {
                                 Text("build up more and more as they move up the food chain.")
                             }
                             .font(.title2)
-                            .padding()
+                            .padding(30)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
                                     .fill(Color("ButtonColor"))
@@ -33,7 +33,7 @@ struct BiomagnificationView: View {
                             
                             Spacer()
                         }
-                        .padding(.top, 10)
+                        .padding(.top, 20)
                     }
                     
                     Spacer()

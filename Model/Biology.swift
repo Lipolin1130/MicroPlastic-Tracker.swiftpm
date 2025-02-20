@@ -23,7 +23,7 @@ struct Biology: Hashable, Equatable, Identifiable {
     
     var size: Double {
         switch type {
-        case .salp: return 75
+        case .salp: return 50
         case .shrimp: return 100
         case .anchovy: return 125
         case .skipjackTuna: return 150
