@@ -28,8 +28,9 @@ extension Image {
         } else {
             return AnyView(
                 self
-                    .foregroundStyle(.white)
-                    .blendMode(.destinationOut)
+                    .renderingMode(.template)
+                    .foregroundColor(.black)
+                    .mask(self)
             )
         }
     }

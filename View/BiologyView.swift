@@ -194,7 +194,7 @@ struct BiologyView: View {
 
 #Preview {
     BiologyView(
-        enabled: .constant(false),
+        enabled: .constant(true),
         biology: human,
         firstIntro: true
     )
