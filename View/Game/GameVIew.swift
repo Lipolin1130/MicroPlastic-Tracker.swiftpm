@@ -39,7 +39,7 @@ struct GameView: View {
                         MuseumView(firstIntro: false)
                     } label: {
                         Image(systemName: "books.vertical")
-                            .opacity(0.8)
+                            .foregroundStyle(.white.opacity(0.8))
                     }
                 }
                 .font(.system(size: 60))

@@ -22,7 +22,7 @@ struct BiologyInfo: Hashable {
         .shrimp: Microplastic(microbeads: 10, microfibers: 15, microfragments: 12),
         .anchovy: Microplastic(microbeads: 50, microfibers: 48, microfragments: 54),
         .skipjackTuna: Microplastic(microbeads: 258, microfibers: 264, microfragments: 280),
-        .tuna: Microplastic(microbeads: 872, microfibers: 940, microfragments: 900),
+        .marlin: Microplastic(microbeads: 872, microfibers: 940, microfragments: 900),
         .human: Microplastic(microbeads: 2000, microfibers: 2000, microfragments: 2000)
     ]
 }
@@ -32,7 +32,7 @@ enum BiologyType: String {
     case shrimp = "northern Prawn"
     case anchovy = "Anchovy"
     case skipjackTuna = "skipjack Tuna"
-    case tuna = "Atlantic bluefine tuna"
+    case marlin = "Marlin"
     case human = "Human"
 }
 

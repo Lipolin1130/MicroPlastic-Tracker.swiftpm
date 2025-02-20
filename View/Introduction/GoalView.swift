@@ -59,7 +59,7 @@ struct GoalView: View {
                                 .scaledToFit()
                                 .frame(height: 85)
                             
-                            Text("5000")
+                            Text("\(gameService.targetMicroplastic.microfragments)")
                                 .font(.title3)
                         }
                         
@@ -69,7 +69,7 @@ struct GoalView: View {
                                 .scaledToFit()
                                 .frame(height: 85)
                             
-                            Text("5000")
+                            Text("\(gameService.targetMicroplastic.microfibers)")
                                 .font(.title3)
                         }
                         
@@ -79,7 +79,7 @@ struct GoalView: View {
                                 .scaledToFit()
                                 .frame(height: 85)
                             
-                            Text("5000")
+                            Text("\(gameService.targetMicroplastic.microbeads)")
                                 .font(.title3)
                         }
                     }
@@ -108,12 +108,12 @@ struct GoalView: View {
                         GameView()
                     } label: {
                         Text("Next")
-                            .foregroundStyle(Color("ButtonColor"))
+                            .foregroundStyle(Color("textColor"))
                             .bold()
                             .font(.title2)
                             .padding(18)
                             .frame(width: 120)
-                            .background(.indigo)
+                            .background(Color("ButtonColor"))
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10)
                     }

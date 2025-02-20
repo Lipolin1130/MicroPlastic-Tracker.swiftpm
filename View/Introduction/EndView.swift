@@ -20,7 +20,7 @@ struct EndView: View {
             VStack {
                 Spacer()
                 
-                Text("Thank you for playing~~")
+                Text("Thank you for playing")
                     .font(.system(size: 50))
                     .foregroundStyle(Color("textColor"))
                     .padding(.top, 250)

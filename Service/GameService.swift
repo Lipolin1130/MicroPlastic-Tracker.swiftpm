@@ -40,7 +40,7 @@ class GameService: ObservableObject {
             CollectedBiology(type: .shrimp, enabled: true),
             CollectedBiology(type: .anchovy, enabled: false),
             CollectedBiology(type: .skipjackTuna, enabled: false),
-            CollectedBiology(type: .tuna, enabled: false),
+            CollectedBiology(type: .marlin, enabled: false),
             CollectedBiology(type: .human, enabled: false)
         ]
         
@@ -108,7 +108,7 @@ class GameService: ObservableObject {
             CollectedBiology(type: .shrimp, enabled: true),
             CollectedBiology(type: .anchovy, enabled: false),
             CollectedBiology(type: .skipjackTuna, enabled: false),
-            CollectedBiology(type: .tuna, enabled: false),
+            CollectedBiology(type: .marlin, enabled: false),
             CollectedBiology(type: .human, enabled: false)
         ]
         

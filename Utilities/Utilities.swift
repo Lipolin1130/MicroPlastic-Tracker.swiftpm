@@ -46,8 +46,8 @@ extension BiologyType {
             return "Anchovy"
         case .skipjackTuna:
             return "Skipjack Tuna"
-        case .tuna:
-            return "Tuna"
+        case .marlin:
+            return "Marlin"
         case .human:
             return "Human"
         }

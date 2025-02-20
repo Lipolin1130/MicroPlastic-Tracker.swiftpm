@@ -45,7 +45,7 @@ struct RewardSingleView: View {
 
 #Preview {
     RewardSingleView(biology: CollectedBiology(
-        type: .salp,
+        type: .marlin,
         enabled: true)
     )
 }

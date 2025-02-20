@@ -11,5 +11,5 @@ let congratulationsText: String = "Total Microplastics Colleted: µg"
 
 let biology: [BiologyInfo] = [
     salp, northernPrawn, anchovy,
-    skipjackTuna, atlanticBluefineTuna, human
+    skipjackTuna, atlanticBlueMarlin, human
 ]

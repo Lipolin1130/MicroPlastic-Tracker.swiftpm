@@ -16,7 +16,7 @@ struct Biology: Hashable, Equatable, Identifiable {
         case .shrimp: return northernPrawn.microplastic
         case .anchovy: return anchovy.microplastic
         case .skipjackTuna: return skipjackTuna.microplastic
-        case .tuna: return atlanticBluefineTuna.microplastic
+        case .marlin: return atlanticBlueMarlin.microplastic
         case .human: return human.microplastic
         }
     }
@@ -27,7 +27,7 @@ struct Biology: Hashable, Equatable, Identifiable {
         case .shrimp: return 100
         case .anchovy: return 125
         case .skipjackTuna: return 150
-        case .tuna: return 200
+        case .marlin: return 200
         case .human: return 250
         }
     }

@@ -81,12 +81,12 @@ struct MicroplasticIntroView: View {
                         GoalView(getFromSheet: false)
                     } label: {
                         Text("Next")
-                            .foregroundStyle(Color("ButtonColor"))
+                            .foregroundStyle(Color("textColor"))
                             .bold()
                             .font(.title2)
                             .padding(18)
                             .frame(width: 120)
-                            .background(Color.indigo)
+                            .background(Color("ButtonColor"))
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10)
                     }

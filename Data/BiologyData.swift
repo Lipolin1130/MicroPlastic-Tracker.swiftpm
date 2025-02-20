@@ -50,15 +50,15 @@ let skipjackTuna = BiologyInfo(
     microplastic: BiologyInfo.requirements[.skipjackTuna]!
 )
 
-let atlanticBluefineTuna = BiologyInfo(
-    type: .tuna,
-    scientificName: "\"Thunnus thynnus\"",
-    introduction: "The Atlantic bluefin tuna is a highly migratory species found in both the western and eastern Atlantic Ocean, as well as the Mediterranean Sea. Known for its impressive size and speed, it has been a significant species in commercial fisheries.",
-    characteristics: "Atlantic bluefin tunas have streamlined bodies built for speed, with a metallic blue coloration on the dorsal side and silver on the ventral side. They can reach lengths up to 4.6 meters and weights up to 684 kilograms.",
-    habitat: "Inhabit both the western and eastern Atlantic Ocean, as well as the Mediterranean Sea. They are known for long-distance migrations across these regions.",
-    size: "460.0",
+let atlanticBlueMarlin = BiologyInfo(
+    type: .marlin,
+    scientificName: "\"Makaira nigricans\"",
+    introduction: "The Atlantic blue marlin is a large, migratory billfish found in tropical and subtropical oceans worldwide. Known for its speed and strength, it is a prized species in recreational and commercial fisheries.",
+    characteristics: "Atlantic blue marlins have elongated, streamlined bodies with a sharp bill used for slashing through schools of fish. They exhibit a striking cobalt blue color on their dorsal side and silver-white ventral side.",
+    habitat: "Inhabit tropical and subtropical waters of the Atlantic Ocean, preferring warm, open waters. They are known for their extensive migrations across ocean basins.",
+    size: "500.0",
     torphicLevel: .apexPredator,
-    microplastic: BiologyInfo.requirements[.tuna]!
+    microplastic: BiologyInfo.requirements[.marlin]!
 )
 
 

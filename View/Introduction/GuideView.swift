@@ -15,9 +15,6 @@ struct GuideView: View {
     var body: some View {
         VStack {
             ZStack {
-                RandomImage(imageName: "bottle", count: 5)
-                
-                RandomImage(imageName: "plastic bag", count: 5)
                 
                 GeometryReader { geometry in
                     Image("microplasticFishEat")
