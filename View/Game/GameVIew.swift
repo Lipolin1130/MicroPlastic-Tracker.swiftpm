@@ -16,7 +16,7 @@ struct GameView: View {
             VStack {
                 HStack(alignment: .center) {
                     NavigationLink {
-                        GoalView(getFromSheet: true)
+                        GoalOneView(getFromSheet: true)
                     } label: {
                         Image(systemName: "questionmark.circle")
                             .foregroundStyle(.white.opacity(0.8))

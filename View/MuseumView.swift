@@ -92,6 +92,6 @@ struct MuseumView: View {
 }
 
 #Preview {
-    MuseumView(firstIntro: false)
+    MuseumView(firstIntro: true)
         .environmentObject(GameService())
 }

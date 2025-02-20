@@ -25,9 +25,9 @@ struct Biology: Hashable, Equatable, Identifiable {
         switch type {
         case .salp: return 50
         case .shrimp: return 100
-        case .anchovy: return 125
-        case .skipjackTuna: return 150
-        case .marlin: return 200
+        case .anchovy: return 150
+        case .skipjackTuna: return 200
+        case .marlin: return 230
         case .human: return 250
         }
     }

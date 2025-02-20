@@ -166,7 +166,7 @@ struct BiologyView: View {
             BiologyDetailView(biology: biology, showSheet: $showSheet)
         }
         .onAppear {
-            if gameService.unLock(need: biology.microplastic) {
+            if gameService.unLock(need: biology.microplastic) && !firstIntro {
                 startUnlockAnimation()
             }
         }

@@ -29,10 +29,10 @@ struct BiologyInfo: Hashable {
 
 enum BiologyType: String {
     case salp = "Salp"
-    case shrimp = "northern Prawn"
+    case shrimp = "Northern Prawn"
     case anchovy = "Anchovy"
-    case skipjackTuna = "skipjack Tuna"
-    case marlin = "Marlin"
+    case skipjackTuna = "Skipjack Tuna"
+    case marlin = "Atlantic blue marlin"
     case human = "Human"
 }
 
@@ -41,7 +41,7 @@ enum torphicLevelType: String {
     case primaryConsumer = "Primary Consumer" // 初級消費者
     case secondaryConsumer = "Secondary Consumer" // 中級消費者
     case tertiaryConsumer = "Mid-level Predator" // 高級消費者
-    case apexPredator = "Top-level Consumer" // 頂級消費者
+    case apexPredator = "Apex Predator" // 頂級消費者
     case topPredator = "Top Predator" // 高等生物
 }
 

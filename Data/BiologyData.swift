@@ -46,7 +46,7 @@ let skipjackTuna = BiologyInfo(
     characteristics: "Skipjack tunas have streamlined bodies built for speed, with a metallic blue coloration on the dorsal side and silver on the ventral side. They can grow up to 1 meter in length.",
     habitat: "Inhabit tropical and warm-temperate oceans worldwide, often found in large schools in surface waters.",
     size: "100.0",
-    torphicLevel: .tertiaryConsumer,
+    torphicLevel: .apexPredator,
     microplastic: BiologyInfo.requirements[.skipjackTuna]!
 )
 

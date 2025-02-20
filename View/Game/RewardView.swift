@@ -73,12 +73,12 @@ struct RewardView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                         .shadow(radius: 10)
                 }
-                .padding([.leading, .top], 80)
+                .padding([.leading, .top], 30)
                    
             }
             .padding(.top, 10)
         }
-        .padding(20)
+        .padding(25)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .monospaced()
         .navigationBarBackButtonHidden()
